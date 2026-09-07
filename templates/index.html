@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ config.title }}</title>
+    <meta name="description" content="{{ section.description | default(value="") }}">
+    <style>
+        :root {
+            --ink: #1a1a1a;
+            --muted: #666;
+            --accent: #2b5797;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.65;
+            color: var(--ink);
+            max-width: 42rem;
+            margin: 0 auto;
+            padding: 4rem 1.5rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 0.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            margin-top: 2.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--muted);
+        }
+
+        p strong {
+            font-size: 1.1rem;
+        }
+
+        a {
+            color: var(--accent);
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e5e5e5;
+            margin: 3rem 0;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 2rem 1.25rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {{ section.content | safe }}
+</body>
+
+</html>
