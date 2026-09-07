@@ -1,7 +1,7 @@
 base_url = "https://flaviodrogo.be"
 
 title = "Flavio Drogo"
-description = "Ingénieur civil en informatique et gestion — optimisation, apprentissage automatique et développement logiciel."
+description = "Ingénieur civil en informatique et gestion : optimisation, apprentissage automatique et développement logiciel."
 default_language = "fr"
 
 compile_sass = false

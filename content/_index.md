@@ -4,7 +4,7 @@ description = "Optimisation, apprentissage automatique et développement logicie
 
 [extra]
 hero_title = "L'optimisation et l'apprentissage automatique appliqués à vos <em>problèmes concrets</em>."
-hero_lead = "Je modélise des problèmes de décision — planification, allocation, prévision — et je livre l'outil qui les résout. De la première analyse au code en production, un seul interlocuteur."
+hero_lead = "Je modélise des problèmes de décision (planification, allocation, prévision) et je livre l'outil qui les résout. De la première analyse au code en production, un seul interlocuteur."
 hero_cta = "Parlons de votre problème"
 hero_cta_alt = "Voir la démonstration"
 
@@ -13,8 +13,8 @@ methode_title = "Du premier appel à la mise en production"
 travaux_title = "Ce sur quoi j'ai travaillé"
 profil_title = "Qui vous répondra"
 
-profil_lead = "Ingénieur civil en informatique et gestion, finalité spécialisée en <em>Artificial Intelligence and Decision Aid</em>. L'optimisation m'intéresse dans ses deux acceptions : au sens mathématique — formuler un problème de décision et le résoudre — et au sens du code, en allant chercher ce que les langages compilés ont réellement à offrir."
-profil_body = "Mon travail consiste autant à écrire ce code qu'à traduire un besoin métier en une solution proportionnée. Souvent, la bonne réponse est plus simple qu'un modèle d'apprentissage — et je le dis quand c'est le cas."
+profil_lead = "Ingénieur civil en informatique et gestion, finalité spécialisée en <em>Artificial Intelligence and Decision Aid</em>. L'optimisation m'intéresse dans ses deux acceptions : au sens mathématique (formuler un problème de décision et le résoudre) et au sens du code, en allant chercher ce que les langages compilés ont réellement à offrir."
+profil_body = "Mon travail consiste autant à écrire ce code qu'à traduire un besoin métier en une solution proportionnée. Souvent, la bonne réponse est plus simple qu'un modèle d'apprentissage, et je le dis quand c'est le cas."
 profil_note = "Participation aux concours de programmation BAPC et NWERC en 2024 et en 2025."
 skills = ["Python", "C++", "PyTorch", "JavaScript", "SQL", "Git"]
 
@@ -23,7 +23,7 @@ contact_lead = "Premier échange sans engagement, réponse sous deux jours ouvra
 
 demo_eyebrow = "Démonstration"
 demo_title = "Deux réseaux de neurones qui tournent dans votre navigateur"
-demo_body = "Le premier apprend sous vos yeux à séparer deux nuages de points : vous choisissez l'optimiseur, la profondeur du réseau, et vous regardez la frontière de décision se former. Le second reconnaît un chiffre que vous tracez à la souris. Aucun serveur, aucune librairie — la rétropropagation tient dans le fichier JavaScript de la page."
+demo_body = "Le premier apprend sous vos yeux à séparer deux nuages de points : vous choisissez l'optimiseur, la profondeur du réseau, et vous regardez la frontière de décision se former. Le second reconnaît un chiffre que vous tracez à la souris. Aucun serveur, aucune librairie : la rétropropagation tient dans le fichier JavaScript de la page."
 demo_cta = "Ouvrir la démonstration"
 
 [[extra.facts]]
@@ -46,7 +46,7 @@ body = "Planification, ordonnancement, tournées, allocation de ressources. Je f
 [[extra.services]]
 key = "B"
 title = "Modèles d'apprentissage"
-body = "Prévision, classification, détection d'anomalies. Un modèle entraîné sur vos données et évalué sans complaisance — y compris quand le verdict est qu'il ne tient pas ses promesses."
+body = "Prévision, classification, détection d'anomalies. Un modèle entraîné sur vos données et évalué sans complaisance, y compris quand le verdict est qu'il ne tient pas ses promesses."
 
 [[extra.services]]
 key = "C"
@@ -59,7 +59,7 @@ title = "Applications et automatisation"
 body = "Site, outil interne, traitement récurrent qui mange vos journées. La partie la moins spectaculaire du métier, souvent celle qui se rentabilise le plus vite."
 
 [[extra.methode]]
-title = "Cadrage — gratuit"
+title = "Cadrage gratuit"
 body = "Un appel d'une heure pour comprendre le problème, les données réellement disponibles, et ce qui compte pour vous."
 
 [[extra.methode]]

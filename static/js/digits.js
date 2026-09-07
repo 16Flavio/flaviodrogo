@@ -2,7 +2,7 @@
 
    Le modèle est un perceptron 784-128-10 entraîné hors ligne sur MNIST, dont
    les poids sont quantifiés sur 8 bits. L'essentiel du travail n'est pas
-   l'inférence — deux produits matriciels — mais le prétraitement : un chiffre
+   l'inférence (deux produits matriciels) mais le prétraitement : un chiffre
    dessiné dans un grand cadre ne ressemble à une image MNIST qu'une fois
    recadré, mis à l'échelle sur 20 pixels et recentré sur son centre de masse. */
 
@@ -76,6 +76,8 @@
         status.textContent = 'Perceptron ' + raw.arch.join('-') + ' · '
           + String(Math.round(raw.acc * 1000) / 10).replace('.', ',')
           + ' % sur le jeu de test MNIST.';
+        // Le visiteur a pu dessiner pendant le telechargement des poids.
+        run();
       })
       .catch(function () {
         status.textContent = 'Le modèle n’a pas pu être chargé. Le reste de la page fonctionne.';
@@ -200,7 +202,7 @@
     inkCtx.fillRect(0, 0, ink.width, ink.height);
     pixels.fill(0);
     paintPreview();
-    answer.textContent = '—';
+    answer.textContent = '?';
     for (var k = 0; k < rows.length; k++) {
       rows[k].querySelector('.bar__fill').style.width = '0%';
       rows[k].querySelector('.bar__pct').textContent = '0 %';
