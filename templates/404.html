@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="demo-intro">
+  <span class="eyebrow">Erreur 404</span>
+  <h1 class="display display--sm">Cette page n'existe pas.</h1>
+  <p class="lead">Le lien est peut-être ancien, ou l'adresse comporte une faute de frappe.</p>
+  <div class="actions">
+    <a class="btn" href="{{ get_url(path='/') }}">Retour à l'accueil</a>
+    <a class="btn btn--ghost" href="{{ get_url(path='@/demo.md') }}">Voir la démonstration</a>
+  </div>
+</section>
+{% endblock content %}

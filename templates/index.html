@@ -1,69 +1,326 @@
-<!DOCTYPE html>
-<html lang="fr">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{{ config.title }}</title>
-    <meta name="description" content="{{ section.description | default(value="") }}">
-    <style>
-        :root {
-            --ink: #1a1a1a;
-            --muted: #666;
-            --accent: #2b5797;
-        }
+{% block content %}
+{% set c = section.extra %}
 
-        * {
-            box-sizing: border-box;
-        }
+<section class="hero">
+  <div class="hero__pitch">
+    <h1 class="display">{{ c.hero_title | safe }}</h1>
+    <p class="lead">{{ c.hero_lead }}</p>
+    <div class="actions">
+      <a class="btn" href="#contact">{{ c.hero_cta }}</a>
+      <a class="btn btn--ghost" href="{{ get_url(path='@/demo.md') }}">{{ c.hero_cta_alt }}</a>
+    </div>
+  </div>
+  <dl class="facts">
+    {% for f in c.facts %}
+    <div class="facts__row">
+      <dt>{{ f.label }}</dt>
+      <dd>{{ f.value }}</dd>
+    </div>
+    {% endfor %}
+  </dl>
+</section>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            line-height: 1.65;
-            color: var(--ink);
-            max-width: 42rem;
-            margin: 0 auto;
-            padding: 4rem 1.5rem;
-        }
+<section class="band" id="services">
+  <div class="band__head">
+    <span class="eyebrow">01 — Services</span>
+    <h2 class="heading">{{ c.services_title }}</h2>
+  </div>
+  <div class="band__body">
+    <div class="cards">
+      {% for s in c.services %}
+      <article class="card">
+        <span class="card__key">{{ s.key }}</span>
+        <h3>{{ s.title }}</h3>
+        <p>{{ s.body }}</p>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
 
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 0.25rem;
-            letter-spacing: -0.02em;
-        }
+<section class="band" id="methode">
+  <div class="band__head">
+    <span class="eyebrow">02 — Méthode</span>
+    <h2 class="heading">{{ c.methode_title }}</h2>
+  </div>
+  <div class="band__body">
+    <ol class="steps">
+      {% for s in c.methode %}
+      <li class="steps__item">
+        <span class="steps__num">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+        <div>
+          <h3>{{ s.title }}</h3>
+          <p>{{ s.body }}</p>
+        </div>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
 
-        h2 {
-            font-size: 1.15rem;
-            margin-top: 2.5rem;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            color: var(--muted);
-        }
+<section class="band band--stack" id="travaux">
+  <div class="band__head">
+    <span class="eyebrow">03 — Travaux</span>
+    <h2 class="heading">{{ c.travaux_title }}</h2>
+  </div>
+  <div class="works">
+    {% for w in c.travaux %}
+    <article class="work">
+      <div class="work__thumb">
+      {% if w.icon == "matrix" %}
+      <svg class="thumb" viewBox="0 0 220 132" role="img" aria-label="Une matrice booleenne approchee par le produit de deux facteurs plus etroits">
+      <text class="thumb__label" x="8" y="32">A</text>
+      <text class="thumb__label" x="98" y="32">B</text>
+      <text class="thumb__label" x="145" y="32">C</text>
+      <text class="thumb__op" x="82" y="72">&#8776;</text>
+      <text class="thumb__op" x="133" y="72">&#183;</text>
+      <g fill="currentColor">
+        <rect x="8" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="26" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="35" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="53" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="62" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="71" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="8" y="49" width="7.5" height="7.5" rx="1"/>
+      <rect x="26" y="49" width="7.5" height="7.5" rx="1"/>
+      <rect x="35" y="49" width="7.5" height="7.5" rx="1"/>
+      <rect x="53" y="49" width="7.5" height="7.5" rx="1"/>
+      <rect x="8" y="58" width="7.5" height="7.5" rx="1"/>
+      <rect x="26" y="58" width="7.5" height="7.5" rx="1"/>
+      <rect x="35" y="58" width="7.5" height="7.5" rx="1"/>
+      <rect x="53" y="58" width="7.5" height="7.5" rx="1"/>
+      <rect x="53" y="67" width="7.5" height="7.5" rx="1"/>
+      <rect x="62" y="67" width="7.5" height="7.5" rx="1"/>
+      <rect x="71" y="67" width="7.5" height="7.5" rx="1"/>
+      <rect x="8" y="76" width="7.5" height="7.5" rx="1"/>
+      <rect x="26" y="76" width="7.5" height="7.5" rx="1"/>
+      <rect x="35" y="76" width="7.5" height="7.5" rx="1"/>
+      <rect x="53" y="76" width="7.5" height="7.5" rx="1"/>
+      <rect x="62" y="76" width="7.5" height="7.5" rx="1"/>
+      <rect x="71" y="76" width="7.5" height="7.5" rx="1"/>
+      </g>
+      <g fill="currentColor" opacity="0.7">
+        <rect x="98" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="107" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="116" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="116" y="49" width="7.5" height="7.5" rx="1"/>
+      <rect x="116" y="58" width="7.5" height="7.5" rx="1"/>
+      <rect x="98" y="67" width="7.5" height="7.5" rx="1"/>
+      <rect x="107" y="76" width="7.5" height="7.5" rx="1"/>
+      <rect x="116" y="76" width="7.5" height="7.5" rx="1"/>
+      </g>
+      <g fill="currentColor" opacity="0.7">
+        <rect x="190" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="199" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="208" y="40" width="7.5" height="7.5" rx="1"/>
+      <rect x="163" y="49" width="7.5" height="7.5" rx="1"/>
+      <rect x="172" y="49" width="7.5" height="7.5" rx="1"/>
+      <rect x="199" y="49" width="7.5" height="7.5" rx="1"/>
+      <rect x="208" y="49" width="7.5" height="7.5" rx="1"/>
+      <rect x="145" y="58" width="7.5" height="7.5" rx="1"/>
+      <rect x="163" y="58" width="7.5" height="7.5" rx="1"/>
+      <rect x="172" y="58" width="7.5" height="7.5" rx="1"/>
+      <rect x="190" y="58" width="7.5" height="7.5" rx="1"/>
+      </g>
+    </svg>
+      {% elif w.icon == "network" %}
+      <svg class="thumb" viewBox="0 0 220 132" role="img" aria-label="Un reseau de neurones dense a quatre couches">
+          <g stroke="currentColor" stroke-width="0.55" opacity="0.32">
+            <line x1="24" y1="39" x2="84" y2="21"/>
+            <line x1="24" y1="39" x2="84" y2="39"/>
+            <line x1="24" y1="39" x2="84" y2="57"/>
+            <line x1="24" y1="39" x2="84" y2="75"/>
+            <line x1="24" y1="39" x2="84" y2="93"/>
+            <line x1="24" y1="39" x2="84" y2="111"/>
+            <line x1="24" y1="57" x2="84" y2="21"/>
+            <line x1="24" y1="57" x2="84" y2="39"/>
+            <line x1="24" y1="57" x2="84" y2="57"/>
+            <line x1="24" y1="57" x2="84" y2="75"/>
+            <line x1="24" y1="57" x2="84" y2="93"/>
+            <line x1="24" y1="57" x2="84" y2="111"/>
+            <line x1="24" y1="75" x2="84" y2="21"/>
+            <line x1="24" y1="75" x2="84" y2="39"/>
+            <line x1="24" y1="75" x2="84" y2="57"/>
+            <line x1="24" y1="75" x2="84" y2="75"/>
+            <line x1="24" y1="75" x2="84" y2="93"/>
+            <line x1="24" y1="75" x2="84" y2="111"/>
+            <line x1="24" y1="93" x2="84" y2="21"/>
+            <line x1="24" y1="93" x2="84" y2="39"/>
+            <line x1="24" y1="93" x2="84" y2="57"/>
+            <line x1="24" y1="93" x2="84" y2="75"/>
+            <line x1="24" y1="93" x2="84" y2="93"/>
+            <line x1="24" y1="93" x2="84" y2="111"/>
+            <line x1="84" y1="21" x2="144" y2="21"/>
+            <line x1="84" y1="21" x2="144" y2="39"/>
+            <line x1="84" y1="21" x2="144" y2="57"/>
+            <line x1="84" y1="21" x2="144" y2="75"/>
+            <line x1="84" y1="21" x2="144" y2="93"/>
+            <line x1="84" y1="21" x2="144" y2="111"/>
+            <line x1="84" y1="39" x2="144" y2="21"/>
+            <line x1="84" y1="39" x2="144" y2="39"/>
+            <line x1="84" y1="39" x2="144" y2="57"/>
+            <line x1="84" y1="39" x2="144" y2="75"/>
+            <line x1="84" y1="39" x2="144" y2="93"/>
+            <line x1="84" y1="39" x2="144" y2="111"/>
+            <line x1="84" y1="57" x2="144" y2="21"/>
+            <line x1="84" y1="57" x2="144" y2="39"/>
+            <line x1="84" y1="57" x2="144" y2="57"/>
+            <line x1="84" y1="57" x2="144" y2="75"/>
+            <line x1="84" y1="57" x2="144" y2="93"/>
+            <line x1="84" y1="57" x2="144" y2="111"/>
+            <line x1="84" y1="75" x2="144" y2="21"/>
+            <line x1="84" y1="75" x2="144" y2="39"/>
+            <line x1="84" y1="75" x2="144" y2="57"/>
+            <line x1="84" y1="75" x2="144" y2="75"/>
+            <line x1="84" y1="75" x2="144" y2="93"/>
+            <line x1="84" y1="75" x2="144" y2="111"/>
+            <line x1="84" y1="93" x2="144" y2="21"/>
+            <line x1="84" y1="93" x2="144" y2="39"/>
+            <line x1="84" y1="93" x2="144" y2="57"/>
+            <line x1="84" y1="93" x2="144" y2="75"/>
+            <line x1="84" y1="93" x2="144" y2="93"/>
+            <line x1="84" y1="93" x2="144" y2="111"/>
+            <line x1="84" y1="111" x2="144" y2="21"/>
+            <line x1="84" y1="111" x2="144" y2="39"/>
+            <line x1="84" y1="111" x2="144" y2="57"/>
+            <line x1="84" y1="111" x2="144" y2="75"/>
+            <line x1="84" y1="111" x2="144" y2="93"/>
+            <line x1="84" y1="111" x2="144" y2="111"/>
+            <line x1="144" y1="21" x2="204" y2="48"/>
+            <line x1="144" y1="21" x2="204" y2="66"/>
+            <line x1="144" y1="21" x2="204" y2="84"/>
+            <line x1="144" y1="39" x2="204" y2="48"/>
+            <line x1="144" y1="39" x2="204" y2="66"/>
+            <line x1="144" y1="39" x2="204" y2="84"/>
+            <line x1="144" y1="57" x2="204" y2="48"/>
+            <line x1="144" y1="57" x2="204" y2="66"/>
+            <line x1="144" y1="57" x2="204" y2="84"/>
+            <line x1="144" y1="75" x2="204" y2="48"/>
+            <line x1="144" y1="75" x2="204" y2="66"/>
+            <line x1="144" y1="75" x2="204" y2="84"/>
+            <line x1="144" y1="93" x2="204" y2="48"/>
+            <line x1="144" y1="93" x2="204" y2="66"/>
+            <line x1="144" y1="93" x2="204" y2="84"/>
+            <line x1="144" y1="111" x2="204" y2="48"/>
+            <line x1="144" y1="111" x2="204" y2="66"/>
+            <line x1="144" y1="111" x2="204" y2="84"/>
+          </g>
+          <g fill="currentColor">
+            <circle cx="24" cy="39" r="4"/>
+            <circle cx="24" cy="57" r="4"/>
+            <circle cx="24" cy="75" r="4"/>
+            <circle cx="24" cy="93" r="4"/>
+            <circle cx="84" cy="21" r="4"/>
+            <circle cx="84" cy="39" r="4"/>
+            <circle cx="84" cy="57" r="4"/>
+            <circle cx="84" cy="75" r="4"/>
+            <circle cx="84" cy="93" r="4"/>
+            <circle cx="84" cy="111" r="4"/>
+            <circle cx="144" cy="21" r="4"/>
+            <circle cx="144" cy="39" r="4"/>
+            <circle cx="144" cy="57" r="4"/>
+            <circle cx="144" cy="75" r="4"/>
+            <circle cx="144" cy="93" r="4"/>
+            <circle cx="144" cy="111" r="4"/>
+            <circle cx="204" cy="48" r="4"/>
+            <circle cx="204" cy="66" r="4"/>
+            <circle cx="204" cy="84" r="4"/>
+          </g>
+        </svg>
+      {% elif w.icon == "tree" %}
+      <svg class="thumb" viewBox="0 0 220 132" role="img" aria-label="Un arbre de recherche dont les branches non prometteuses sont elaguees">
+          <g stroke="currentColor" fill="none" stroke-width="1.3" stroke-dasharray="3 4" opacity="0.38">
+            <path d="M110 24 L162 62"/>
+            <path d="M162 62 L136 100"/>
+            <path d="M162 62 L190 100"/>
+            <path d="M58 62 L88 100"/>
+            <path d="M32 100 L20 124"/>
+          </g>
+          <g stroke="currentColor" fill="none" stroke-width="1.3">
+            <path d="M110 24 L58 62"/>
+            <path d="M58 62 L32 100"/>
+            <path d="M32 100 L46 124"/>
+          </g>
+          <g fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.38">
+            <circle cx="162" cy="62" r="4.5"/>
+            <circle cx="88" cy="100" r="4.5"/>
+            <circle cx="136" cy="100" r="4.5"/>
+            <circle cx="190" cy="100" r="4.5"/>
+            <circle cx="20" cy="124" r="4.5"/>
+          </g>
+          <g fill="currentColor">
+            <circle cx="110" cy="24" r="4.5"/>
+            <circle cx="58" cy="62" r="4.5"/>
+            <circle cx="32" cy="100" r="4.5"/>
+            <circle cx="46" cy="124" r="6"/>
+          </g>
+        </svg>
+      {% endif %}
+      </div>
+      <span class="eyebrow eyebrow--dim">{{ w.eyebrow }}</span>
+      <h3>{{ w.title }}</h3>
+      <p>{{ w.body }}</p>
+    </article>
+    {% endfor %}
+  </div>
 
-        p strong {
-            font-size: 1.1rem;
-        }
+  <a class="feature" href="{{ get_url(path='@/demo.md') }}">
+    <div class="feature__text">
+      <span class="eyebrow eyebrow--invert">{{ c.demo_eyebrow }}</span>
+      <h3 class="feature__title">{{ c.demo_title }}</h3>
+      <p>{{ c.demo_body }}</p>
+      <span class="feature__cta">{{ c.demo_cta }} <span aria-hidden="true">→</span></span>
+    </div>
+    <div class="feature__art" aria-hidden="true">
+      <span class="feature__blob feature__blob--a"></span>
+      <span class="feature__blob feature__blob--b"></span>
+      <span class="feature__digit">7</span>
+    </div>
+  </a>
+</section>
 
-        a {
-            color: var(--accent);
-        }
+<section class="band" id="profil">
+  <div class="band__head">
+    <span class="eyebrow">04 — Profil</span>
+    <h2 class="heading">{{ c.profil_title }}</h2>
+  </div>
+  <div class="band__body profil">
+    <img class="portrait" src="{{ get_url(path=config.extra.photo) }}" width="152" height="152"
+      alt="Portrait de {{ config.title }}">
+    <div class="profil__text">
+      <p class="lead">{{ c.profil_lead | safe }}</p>
+      <p>{{ c.profil_body }}</p>
+      <p class="note">{{ c.profil_note }}</p>
+      <ul class="tags">
+        {% for s in c.skills %}<li>{{ s }}</li>{% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
 
-        hr {
-            border: none;
-            border-top: 1px solid #e5e5e5;
-            margin: 3rem 0;
-        }
-
-        @media (max-width: 600px) {
-            body {
-                padding: 2rem 1.25rem;
-            }
-        }
-    </style>
-</head>
-
-<body>
-    {{ section.content | safe }}
-</body>
-
-</html>
+<section class="band band--last" id="contact">
+  <div class="band__head">
+    <span class="eyebrow">05 — Contact</span>
+    <h2 class="display display--sm">{{ c.contact_title }}</h2>
+  </div>
+  <div class="band__body">
+    <p class="lead">{{ c.contact_lead }}</p>
+    <ul class="channels">
+      <li>
+        <span class="channels__label">E-mail</span>
+        <a class="channels__value" href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a>
+      </li>
+      <li>
+        <span class="channels__label">LinkedIn</span>
+        <a class="channels__value" href="{{ config.extra.linkedin }}" rel="me noopener">drogo-flavio</a>
+      </li>
+      <li>
+        <span class="channels__label">GitHub</span>
+        <a class="channels__value" href="{{ config.extra.github }}" rel="me noopener">16Flavio</a>
+      </li>
+    </ul>
+  </div>
+</section>
+{% endblock %}

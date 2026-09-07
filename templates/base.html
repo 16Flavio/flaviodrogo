@@ -1,0 +1,73 @@
+{%- if page is defined -%}
+{%- set meta_title = page.title ~ " — " ~ config.title -%}
+{%- set meta_description = page.description -%}
+{%- set meta_url = page.permalink -%}
+{%- else -%}
+{%- set meta_title = config.title -%}
+{%- set meta_description = config.description -%}
+{%- set meta_url = config.base_url ~ "/" -%}
+{%- endif -%}
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ meta_title }}</title>
+  <meta name="description" content="{{ meta_description }}">
+  <meta name="author" content="{{ config.title }}">
+  <link rel="canonical" href="{{ meta_url }}">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{{ config.title }}">
+  <meta property="og:locale" content="fr_BE">
+  <meta property="og:title" content="{{ meta_title }}">
+  <meta property="og:description" content="{{ meta_description }}">
+  <meta property="og:url" content="{{ meta_url }}">
+  <meta property="og:image" content="{{ get_url(path=config.extra.photo) }}">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="icon" href="{{ get_url(path='favicon.svg') }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ get_url(path=config.extra.photo) }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="{{ get_url(path='css/site.css', cachebust=true) }}">
+  {% block head %}{% endblock head %}
+</head>
+
+<body>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+
+  <div class="shell">
+    <header class="masthead">
+      <a class="identity" href="{{ get_url(path='/') }}">
+        <span class="identity__name">{{ config.title }}</span>
+        <span class="identity__role">{{ config.extra.role }}</span>
+      </a>
+      <nav class="nav" aria-label="Navigation principale">
+        {% for item in config.extra.nav %}
+        <a href="{{ item.url }}">{{ item.label }}</a>
+        {% endfor %}
+        <a class="nav__cta" href="/#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="contenu">
+      {% block content %}{% endblock content %}
+    </main>
+
+    <footer class="footer">
+      <span>&copy; 2026 {{ config.title }}</span>
+      <nav class="footer__links" aria-label="Liens de contact">
+        <a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a>
+        <a href="{{ config.extra.linkedin }}" rel="me noopener">LinkedIn</a>
+        <a href="{{ config.extra.github }}" rel="me noopener">GitHub</a>
+      </nav>
+    </footer>
+  </div>
+</body>
+
+</html>

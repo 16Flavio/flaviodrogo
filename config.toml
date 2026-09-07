@@ -1,19 +1,40 @@
-# The URL the site will be built for
 base_url = "https://flaviodrogo.be"
 
 title = "Flavio Drogo"
-# theme = "anpu"
+description = "Ingénieur civil en informatique et gestion — optimisation, apprentissage automatique et développement logiciel."
+default_language = "fr"
 
-# Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
-
-# Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
+generate_feeds = false
 
 [markdown]
-
-[markdown.highlighting]
-theme = "catppuccin-mocha"
+smart_punctuation = true
 
 [extra]
-# Put all your custom variables here
+role = "Ingénieur civil · informatique & IA"
+email = "contact@flaviodrogo.be"
+linkedin = "https://www.linkedin.com/in/drogo-flavio-6309aa252/"
+github = "https://github.com/16Flavio"
+photo = "/img/flavio-drogo.jpg"
+
+# Liens de la barre de navigation, communs à toutes les pages.
+[[extra.nav]]
+label = "Services"
+url = "/#services"
+
+[[extra.nav]]
+label = "Méthode"
+url = "/#methode"
+
+[[extra.nav]]
+label = "Travaux"
+url = "/#travaux"
+
+[[extra.nav]]
+label = "Démo"
+url = "/demo/"
+
+[[extra.nav]]
+label = "Profil"
+url = "/#profil"

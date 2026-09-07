@@ -1,3 +1,6 @@
 public/
-.DS_Store
 themes/
+.DS_Store
+
+# Sources de maquette : elles ne font pas partie du site publié.
+Site portfolio ingénieur civil IA/

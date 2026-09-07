@@ -1,7 +1,10 @@
 {
   "name": "flaviodrogo",
   "compatibility_date": "2026-09-01",
-  "assets": { "directory": "./public" },
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  },
   "routes": [
     { "pattern": "flaviodrogo.be", "custom_domain": true },
     { "pattern": "www.flaviodrogo.be", "custom_domain": true }
