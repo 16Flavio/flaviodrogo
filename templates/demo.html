@@ -4,8 +4,8 @@
 {% set c = page.extra %}
 
 <section class="demo-intro">
-  <span class="eyebrow">Démonstration</span>
-  <h1 class="display display--sm">Deux réseaux de neurones, écrits à la main</h1>
+  <span class="eyebrow">{{ c.eyebrow }}</span>
+  <h1 class="display display--sm">{{ c.heading }}</h1>
   <p class="lead">{{ c.intro }}</p>
 </section>
 
@@ -16,64 +16,65 @@
     <p class="demo-body">{{ c.lab_body }}</p>
   </div>
 
-  <div class="lab" data-lab>
+  <div class="lab" data-lab data-locale="{{ trans(key='locale', lang=lang) }}"
+    data-label-run="{{ trans(key='lab_run', lang=lang) }}" data-label-pause="{{ trans(key='lab_pause', lang=lang) }}">
     <div class="lab__stage">
       <canvas class="lab__canvas" data-lab-canvas width="520" height="520"
-        aria-label="Carte des points et de la frontière de décision du réseau"></canvas>
-      <div class="lab__hint">Cliquez dans la carte pour ajouter un point</div>
+        aria-label="{{ trans(key='lab_map_aria', lang=lang) }}"></canvas>
+      <div class="lab__hint">{{ trans(key='lab_hint', lang=lang) }}</div>
     </div>
 
     <div class="lab__side">
       <div class="readouts">
         <div class="readout">
-          <span class="readout__label">Pas</span>
+          <span class="readout__label">{{ trans(key='lab_steps', lang=lang) }}</span>
           <span class="readout__value" data-lab-steps>0</span>
         </div>
         <div class="readout">
-          <span class="readout__label">Perte</span>
+          <span class="readout__label">{{ trans(key='lab_loss', lang=lang) }}</span>
           <span class="readout__value" data-lab-loss>…</span>
         </div>
         <div class="readout">
-          <span class="readout__label">Exactitude</span>
+          <span class="readout__label">{{ trans(key='lab_acc', lang=lang) }}</span>
           <span class="readout__value" data-lab-acc>…</span>
         </div>
       </div>
 
       <canvas class="lab__curve" data-lab-curve width="600" height="120"
-        aria-label="Courbe de la perte au fil de l'entraînement"></canvas>
+        aria-label="{{ trans(key='lab_curve_aria', lang=lang) }}"></canvas>
 
       <div class="controls">
         <label class="control">
-          <span class="control__label">Jeu de points</span>
+          <span class="control__label">{{ trans(key='lab_dataset', lang=lang) }}</span>
           <select data-lab-control="dataset">
-            <option value="spiral">Spirale</option>
-            <option value="circles">Cercles concentriques</option>
-            <option value="moons">Deux lunes</option>
-            <option value="xor">XOR</option>
+            <option value="spiral">{{ trans(key='lab_dataset_spiral', lang=lang) }}</option>
+            <option value="circles">{{ trans(key='lab_dataset_circles', lang=lang) }}</option>
+            <option value="moons">{{ trans(key='lab_dataset_moons', lang=lang) }}</option>
+            <option value="xor">{{ trans(key='lab_dataset_xor', lang=lang) }}</option>
           </select>
         </label>
 
         <label class="control">
-          <span class="control__label">Optimiseur</span>
+          <span class="control__label">{{ trans(key='lab_optimizer', lang=lang) }}</span>
           <select data-lab-control="optimizer">
             <option value="adam">Adam</option>
             <option value="momentum">Momentum</option>
-            <option value="sgd">Descente de gradient</option>
+            <option value="sgd">{{ trans(key='lab_optimizer_sgd', lang=lang) }}</option>
           </select>
         </label>
 
         <label class="control">
-          <span class="control__label">Architecture</span>
+          <span class="control__label">{{ trans(key='lab_arch', lang=lang) }}</span>
           <select data-lab-control="arch">
-            <option value="8,8">2 couches × 8</option>
-            <option value="16,16" selected>2 couches × 16</option>
-            <option value="24,24,24">3 couches × 24</option>
-            <option value="4">1 couche × 4</option>
+            <option value="8,8">{{ trans(key='lab_arch_2x8', lang=lang) }}</option>
+            <option value="16,16" selected>{{ trans(key='lab_arch_2x16', lang=lang) }}</option>
+            <option value="24,24,24">{{ trans(key='lab_arch_3x24', lang=lang) }}</option>
+            <option value="4">{{ trans(key='lab_arch_1x4', lang=lang) }}</option>
           </select>
         </label>
 
         <label class="control">
-          <span class="control__label">Activation</span>
+          <span class="control__label">{{ trans(key='lab_activation', lang=lang) }}</span>
           <select data-lab-control="activation">
             <option value="tanh">tanh</option>
             <option value="relu">ReLU</option>
@@ -81,22 +82,24 @@
         </label>
 
         <label class="control control--wide">
-          <span class="control__label">Taux d'apprentissage <output data-lab-lrout>0,030</output></span>
+          <span class="control__label">{{ trans(key='lab_lr', lang=lang) }} <output data-lab-lrout></output></span>
           <input type="range" data-lab-control="lr" min="-3" max="-0.7" step="0.05" value="-1.52">
         </label>
 
         <div class="control control--wide">
-          <span class="control__label">Classe du point ajouté</span>
-          <div class="segmented" role="group" aria-label="Classe du point ajouté">
-            <button type="button" class="segmented__btn is-active" data-lab-class="1">Orange</button>
-            <button type="button" class="segmented__btn" data-lab-class="0">Bleue</button>
+          <span class="control__label">{{ trans(key='lab_paint', lang=lang) }}</span>
+          <div class="segmented" role="group" aria-label="{{ trans(key='lab_paint', lang=lang) }}">
+            <button type="button" class="segmented__btn is-active" data-lab-class="1">{{
+              trans(key='lab_class_orange', lang=lang) }}</button>
+            <button type="button" class="segmented__btn" data-lab-class="0">{{
+              trans(key='lab_class_blue', lang=lang) }}</button>
           </div>
         </div>
       </div>
 
       <div class="actions actions--tight">
-        <button type="button" class="btn" data-lab-run>Entraîner</button>
-        <button type="button" class="btn btn--ghost" data-lab-reset>Réinitialiser</button>
+        <button type="button" class="btn" data-lab-run>{{ trans(key='lab_run', lang=lang) }}</button>
+        <button type="button" class="btn btn--ghost" data-lab-reset>{{ trans(key='lab_reset', lang=lang) }}</button>
       </div>
 
       <p class="note">{{ c.lab_note }}</p>
@@ -111,24 +114,28 @@
     <p class="demo-body">{{ c.digit_body }}</p>
   </div>
 
-  <div class="digits" data-digits data-weights="{{ get_url(path='data/mnist-mlp.json') }}">
+  <div class="digits" data-digits data-weights="{{ get_url(path='data/mnist-mlp.json') }}"
+    data-locale="{{ trans(key='locale', lang=lang) }}"
+    data-label-status="{{ trans(key='digits_status', lang=lang) }}"
+    data-label-error="{{ trans(key='digits_error', lang=lang) }}">
     <div class="digits__pad">
       <canvas class="digits__canvas" data-digits-canvas width="336" height="336"
-        aria-label="Zone de dessin : tracez un chiffre"></canvas>
+        aria-label="{{ trans(key='digits_pad_aria', lang=lang) }}"></canvas>
       <div class="actions actions--tight">
-        <button type="button" class="btn btn--ghost" data-digits-clear>Effacer</button>
+        <button type="button" class="btn btn--ghost" data-digits-clear>{{
+          trans(key='digits_clear', lang=lang) }}</button>
       </div>
     </div>
 
     <div class="digits__side">
       <div class="digits__seen">
-        <span class="control__label">Ce que voit le réseau</span>
+        <span class="control__label">{{ trans(key='digits_seen', lang=lang) }}</span>
         <canvas class="digits__preview" data-digits-preview width="28" height="28"
-          aria-label="Le tracé après recadrage et recentrage, en 28 par 28 pixels"></canvas>
+          aria-label="{{ trans(key='digits_preview_aria', lang=lang) }}"></canvas>
       </div>
 
       <div class="digits__verdict">
-        <span class="control__label">Prédiction</span>
+        <span class="control__label">{{ trans(key='digits_verdict', lang=lang) }}</span>
         <span class="digits__answer" data-digits-answer>?</span>
       </div>
 
@@ -142,7 +149,7 @@
         {% endfor %}
       </ol>
 
-      <p class="digits__status" data-digits-status>Chargement du modèle…</p>
+      <p class="digits__status" data-digits-status>{{ trans(key='digits_loading', lang=lang) }}</p>
       <p class="note">{{ c.digit_note }}</p>
     </div>
   </div>

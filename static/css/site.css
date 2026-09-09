@@ -175,6 +175,30 @@ a:hover {
   font-weight: 500;
 }
 
+.langs {
+  display: flex;
+  gap: 8px;
+  align-self: stretch;
+  align-items: center;
+  padding-left: 22px;
+  border-left: 1px solid var(--rule);
+}
+
+.langs__item {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+}
+
+.langs__item.is-active {
+  color: var(--body);
+}
+
+a.langs__item:hover {
+  color: var(--accent);
+}
+
 /* -------------------------------------------------------------------- hero */
 
 .hero {
@@ -693,6 +717,10 @@ a:hover {
 
   .nav {
     gap: 16px;
+  }
+
+  .langs {
+    padding-left: 16px;
   }
 }
 

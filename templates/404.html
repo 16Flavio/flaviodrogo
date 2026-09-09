@@ -1,13 +1,17 @@
 {% extends "base.html" %}
 
+{# Zola ne produit qu'une seule page 404 pour tout le site : elle porte donc
+   les deux langues, plutot que d'en imposer une au visiteur egare. #}
 {% block content %}
 <section class="demo-intro">
-  <span class="eyebrow">Erreur 404</span>
-  <h1 class="display display--sm">Cette page n'existe pas.</h1>
-  <p class="lead">Le lien est peut-être ancien, ou l'adresse comporte une faute de frappe.</p>
+  <span class="eyebrow">{{ trans(key='notfound_eyebrow', lang='fr') }}</span>
+  <h1 class="display display--sm">{{ trans(key='notfound_title', lang='fr') }}</h1>
+  <p class="lead">{{ trans(key='notfound_lead', lang='fr') }}</p>
+  <p class="lead" lang="en">{{ trans(key='notfound_title', lang='en') }} {{ trans(key='notfound_lead', lang='en') }}</p>
   <div class="actions">
-    <a class="btn" href="{{ get_url(path='/') }}">Retour à l'accueil</a>
-    <a class="btn btn--ghost" href="{{ get_url(path='@/demo.md') }}">Voir la démonstration</a>
+    <a class="btn" href="{{ get_url(path='/', lang='fr', trailing_slash=true) }}">{{ trans(key='notfound_home', lang='fr') }}</a>
+    <a class="btn btn--ghost" href="{{ get_url(path='/', lang='en', trailing_slash=true) }}" hreflang="en" lang="en">{{
+      trans(key='notfound_home', lang='en') }}</a>
   </div>
 </section>
 {% endblock content %}

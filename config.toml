@@ -11,30 +11,165 @@ generate_feeds = false
 [markdown]
 smart_punctuation = true
 
+[languages.en]
+title = "Flavio Drogo"
+description = "MSc in Computer Science and Management Engineering: optimisation, machine learning and software development."
+build_search_index = false
+generate_feeds = false
+
 [extra]
-role = "Ingénieur civil · informatique & IA"
 email = "contact@flaviodrogo.be"
 linkedin = "https://www.linkedin.com/in/drogo-flavio-6309aa252/"
 github = "https://github.com/16Flavio"
 photo = "/img/flavio-drogo.jpg"
 
-# Liens de la barre de navigation, communs à toutes les pages.
-[[extra.nav]]
-label = "Services"
-url = "/#services"
+# --------------------------------------------------------------------- textes
+# Chaines communes a toutes les pages, appelees par trans(key=..., lang=lang).
+# Le francais est la langue par defaut : ses chaines vivent dans [translations],
+# celles des autres langues dans [languages.<code>.translations].
 
-[[extra.nav]]
-label = "Méthode"
-url = "/#methode"
+[translations]
+locale = "fr-BE"
+og_locale = "fr_BE"
+role = "Ingénieur civil · informatique & IA"
 
-[[extra.nav]]
-label = "Travaux"
-url = "/#travaux"
+skip = "Aller au contenu"
+nav_aria = "Navigation principale"
+nav_services = "Services"
+nav_method = "Méthode"
+nav_work = "Travaux"
+nav_demo = "Démo"
+nav_profile = "Profil"
+nav_contact = "Contact"
+langs_aria = "Choix de la langue"
+footer_aria = "Liens de contact"
 
-[[extra.nav]]
-label = "Démo"
-url = "/demo/"
+eyebrow_services = "01 · Services"
+eyebrow_method = "02 · Méthode"
+eyebrow_work = "03 · Travaux"
+eyebrow_profile = "04 · Profil"
+eyebrow_contact = "05 · Contact"
 
-[[extra.nav]]
-label = "Profil"
-url = "/#profil"
+alt_matrix = "Une matrice booleenne approchee par le produit de deux facteurs plus etroits"
+alt_network = "Un reseau de neurones dense a quatre couches"
+alt_tree = "Un arbre de recherche dont les branches non prometteuses sont elaguees"
+alt_portrait = "Portrait de Flavio Drogo"
+
+channel_email = "E-mail"
+channel_linkedin = "LinkedIn"
+channel_github = "GitHub"
+
+lab_map_aria = "Carte des points et de la frontière de décision du réseau"
+lab_hint = "Cliquez dans la carte pour ajouter un point"
+lab_curve_aria = "Courbe de la perte au fil de l'entraînement"
+lab_steps = "Pas"
+lab_loss = "Perte"
+lab_acc = "Exactitude"
+lab_dataset = "Jeu de points"
+lab_dataset_spiral = "Spirale"
+lab_dataset_circles = "Cercles concentriques"
+lab_dataset_moons = "Deux lunes"
+lab_dataset_xor = "XOR"
+lab_optimizer = "Optimiseur"
+lab_optimizer_sgd = "Descente de gradient"
+lab_arch = "Architecture"
+lab_arch_2x8 = "2 couches × 8"
+lab_arch_2x16 = "2 couches × 16"
+lab_arch_3x24 = "3 couches × 24"
+lab_arch_1x4 = "1 couche × 4"
+lab_activation = "Activation"
+lab_lr = "Taux d'apprentissage"
+lab_paint = "Classe du point ajouté"
+lab_class_orange = "Orange"
+lab_class_blue = "Bleue"
+lab_run = "Entraîner"
+lab_pause = "Mettre en pause"
+lab_reset = "Réinitialiser"
+
+digits_pad_aria = "Zone de dessin : tracez un chiffre"
+digits_clear = "Effacer"
+digits_seen = "Ce que voit le réseau"
+digits_preview_aria = "Le tracé après recadrage et recentrage, en 28 par 28 pixels"
+digits_verdict = "Prédiction"
+digits_loading = "Chargement du modèle…"
+digits_status = "Perceptron {arch} · {acc} % sur le jeu de test MNIST."
+digits_error = "Le modèle n'a pas pu être chargé. Le reste de la page fonctionne."
+
+notfound_eyebrow = "Erreur 404"
+notfound_title = "Cette page n'existe pas."
+notfound_lead = "Le lien est peut-être ancien, ou l'adresse comporte une faute de frappe."
+notfound_home = "Retour à l'accueil"
+notfound_demo = "Voir la démonstration"
+
+[languages.en.translations]
+locale = "en-GB"
+og_locale = "en_GB"
+role = "Engineer · computer science & AI"
+
+skip = "Skip to content"
+nav_aria = "Main navigation"
+nav_services = "Services"
+nav_method = "Method"
+nav_work = "Work"
+nav_demo = "Demo"
+nav_profile = "Profile"
+nav_contact = "Contact"
+langs_aria = "Language selection"
+footer_aria = "Contact links"
+
+eyebrow_services = "01 · Services"
+eyebrow_method = "02 · Method"
+eyebrow_work = "03 · Work"
+eyebrow_profile = "04 · Profile"
+eyebrow_contact = "05 · Contact"
+
+alt_matrix = "A boolean matrix approximated by the product of two narrower factors"
+alt_network = "A dense neural network with four layers"
+alt_tree = "A search tree whose unpromising branches have been pruned"
+alt_portrait = "Portrait of Flavio Drogo"
+
+channel_email = "Email"
+channel_linkedin = "LinkedIn"
+channel_github = "GitHub"
+
+lab_map_aria = "Map of the points and of the network decision boundary"
+lab_hint = "Click inside the map to add a point"
+lab_curve_aria = "Loss curve over the course of training"
+lab_steps = "Steps"
+lab_loss = "Loss"
+lab_acc = "Accuracy"
+lab_dataset = "Point set"
+lab_dataset_spiral = "Spiral"
+lab_dataset_circles = "Concentric circles"
+lab_dataset_moons = "Two moons"
+lab_dataset_xor = "XOR"
+lab_optimizer = "Optimiser"
+lab_optimizer_sgd = "Gradient descent"
+lab_arch = "Architecture"
+lab_arch_2x8 = "2 layers × 8"
+lab_arch_2x16 = "2 layers × 16"
+lab_arch_3x24 = "3 layers × 24"
+lab_arch_1x4 = "1 layer × 4"
+lab_activation = "Activation"
+lab_lr = "Learning rate"
+lab_paint = "Class of the added point"
+lab_class_orange = "Orange"
+lab_class_blue = "Blue"
+lab_run = "Train"
+lab_pause = "Pause"
+lab_reset = "Reset"
+
+digits_pad_aria = "Drawing area: sketch a digit"
+digits_clear = "Clear"
+digits_seen = "What the network sees"
+digits_preview_aria = "The stroke after cropping and recentring, at 28 by 28 pixels"
+digits_verdict = "Prediction"
+digits_loading = "Loading the model…"
+digits_status = "{arch} perceptron · {acc} % on the MNIST test set."
+digits_error = "The model could not be loaded. The rest of the page still works."
+
+notfound_eyebrow = "Error 404"
+notfound_title = "This page does not exist."
+notfound_lead = "The link may be an old one, or the address contains a typo."
+notfound_home = "Back to the home page"
+notfound_demo = "See the demo"

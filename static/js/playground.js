@@ -8,6 +8,19 @@
   var root = document.querySelector('[data-lab]');
   if (!root) return;
 
+  // Les libelles et le format des nombres viennent du gabarit : le script reste
+  // le meme dans les deux langues du site.
+  var LOCALE = root.getAttribute('data-locale') || 'fr-BE';
+  var LABEL_RUN = root.getAttribute('data-label-run') || 'Entraîner';
+  var LABEL_PAUSE = root.getAttribute('data-label-pause') || 'Mettre en pause';
+
+  function decimal(x, digits) {
+    return x.toLocaleString(LOCALE, {
+      minimumFractionDigits: digits,
+      maximumFractionDigits: digits
+    });
+  }
+
   // ------------------------------------------------------------- paramètres
 
   var DOMAIN = 1.25;          // la carte couvre [-1.25, 1.25] dans les deux axes
@@ -238,7 +251,7 @@
     state.losses = [];
     state.step = 0;
     if (newPoints) state.points = DATASETS[opts.dataset.value](POINTS);
-    el.lrOut.textContent = learningRate().toFixed(3).replace('.', ',');
+    el.lrOut.textContent = decimal(learningRate(), 3);
     render();
     updateReadouts();
   }
@@ -275,8 +288,8 @@
     var m = evaluate();
     state.losses.push(m.loss);
     if (state.losses.length > 600) state.losses.shift();
-    el.steps.textContent = state.step.toLocaleString('fr-BE');
-    el.loss.textContent = m.loss.toFixed(3).replace('.', ',');
+    el.steps.textContent = state.step.toLocaleString(LOCALE);
+    el.loss.textContent = decimal(m.loss, 3);
     el.acc.textContent = Math.round(m.acc * 100) + ' %';
     drawCurve();
   }
@@ -436,7 +449,7 @@
 
   function setRunning(on) {
     state.running = on;
-    el.run.textContent = on ? 'Mettre en pause' : 'Entraîner';
+    el.run.textContent = on ? LABEL_PAUSE : LABEL_RUN;
     if (on) requestAnimationFrame(loop);
   }
 
@@ -464,7 +477,7 @@
   });
 
   opts.lr.addEventListener('input', function () {
-    el.lrOut.textContent = learningRate().toFixed(3).replace('.', ',');
+    el.lrOut.textContent = decimal(learningRate(), 3);
   });
 
   root.querySelectorAll('[data-lab-class]').forEach(function (btn) {

@@ -9,7 +9,7 @@
     <p class="lead">{{ c.hero_lead }}</p>
     <div class="actions">
       <a class="btn" href="#contact">{{ c.hero_cta }}</a>
-      <a class="btn btn--ghost" href="{{ get_url(path='@/demo.md') }}">{{ c.hero_cta_alt }}</a>
+      <a class="btn btn--ghost" href="{{ get_url(path='@/demo.md', lang=lang) }}">{{ c.hero_cta_alt }}</a>
     </div>
   </div>
   <dl class="facts">
@@ -24,7 +24,7 @@
 
 <section class="band" id="services">
   <div class="band__head">
-    <span class="eyebrow">01 · Services</span>
+    <span class="eyebrow">{{ trans(key="eyebrow_services", lang=lang) }}</span>
     <h2 class="heading">{{ c.services_title }}</h2>
   </div>
   <div class="band__body">
@@ -42,7 +42,7 @@
 
 <section class="band" id="methode">
   <div class="band__head">
-    <span class="eyebrow">02 · Méthode</span>
+    <span class="eyebrow">{{ trans(key="eyebrow_method", lang=lang) }}</span>
     <h2 class="heading">{{ c.methode_title }}</h2>
   </div>
   <div class="band__body">
@@ -62,7 +62,7 @@
 
 <section class="band band--stack" id="travaux">
   <div class="band__head">
-    <span class="eyebrow">03 · Travaux</span>
+    <span class="eyebrow">{{ trans(key="eyebrow_work", lang=lang) }}</span>
     <h2 class="heading">{{ c.travaux_title }}</h2>
   </div>
   <div class="works">
@@ -70,7 +70,7 @@
     <article class="work">
       <div class="work__thumb">
       {% if w.icon == "matrix" %}
-      <svg class="thumb" viewBox="0 0 220 132" role="img" aria-label="Une matrice booleenne approchee par le produit de deux facteurs plus etroits">
+      <svg class="thumb" viewBox="0 0 220 132" role="img" aria-label="{{ trans(key='alt_matrix', lang=lang) }}">
       <text class="thumb__label" x="8" y="32">A</text>
       <text class="thumb__label" x="98" y="32">B</text>
       <text class="thumb__label" x="145" y="32">C</text>
@@ -126,7 +126,7 @@
       </g>
     </svg>
       {% elif w.icon == "network" %}
-      <svg class="thumb" viewBox="0 0 220 132" role="img" aria-label="Un reseau de neurones dense a quatre couches">
+      <svg class="thumb" viewBox="0 0 220 132" role="img" aria-label="{{ trans(key='alt_network', lang=lang) }}">
           <g stroke="currentColor" stroke-width="0.55" opacity="0.32">
             <line x1="24" y1="39" x2="84" y2="21"/>
             <line x1="24" y1="39" x2="84" y2="39"/>
@@ -230,7 +230,7 @@
           </g>
         </svg>
       {% elif w.icon == "tree" %}
-      <svg class="thumb" viewBox="0 0 220 132" role="img" aria-label="Un arbre de recherche dont les branches non prometteuses sont elaguees">
+      <svg class="thumb" viewBox="0 0 220 132" role="img" aria-label="{{ trans(key='alt_tree', lang=lang) }}">
           <g stroke="currentColor" fill="none" stroke-width="1.3" stroke-dasharray="3 4" opacity="0.38">
             <path d="M110 24 L162 62"/>
             <path d="M162 62 L136 100"/>
@@ -266,7 +266,7 @@
     {% endfor %}
   </div>
 
-  <a class="feature" href="{{ get_url(path='@/demo.md') }}">
+  <a class="feature" href="{{ get_url(path='@/demo.md', lang=lang) }}">
     <div class="feature__text">
       <span class="eyebrow eyebrow--invert">{{ c.demo_eyebrow }}</span>
       <h3 class="feature__title">{{ c.demo_title }}</h3>
@@ -283,12 +283,12 @@
 
 <section class="band" id="profil">
   <div class="band__head">
-    <span class="eyebrow">04 · Profil</span>
+    <span class="eyebrow">{{ trans(key="eyebrow_profile", lang=lang) }}</span>
     <h2 class="heading">{{ c.profil_title }}</h2>
   </div>
   <div class="band__body profil">
     <img class="portrait" src="{{ get_url(path=config.extra.photo) }}" width="152" height="152"
-      alt="Portrait de {{ config.title }}">
+      alt="{{ trans(key='alt_portrait', lang=lang) }}">
     <div class="profil__text">
       <p class="lead">{{ c.profil_lead | safe }}</p>
       <p>{{ c.profil_body }}</p>
@@ -302,14 +302,14 @@
 
 <section class="band band--last" id="contact">
   <div class="band__head">
-    <span class="eyebrow">05 · Contact</span>
+    <span class="eyebrow">{{ trans(key="eyebrow_contact", lang=lang) }}</span>
     <h2 class="display display--sm">{{ c.contact_title }}</h2>
   </div>
   <div class="band__body">
     <p class="lead">{{ c.contact_lead }}</p>
     <ul class="channels">
       <li>
-        <span class="channels__label">E-mail</span>
+        <span class="channels__label">{{ trans(key="channel_email", lang=lang) }}</span>
         <a class="channels__value" href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a>
       </li>
       <li>

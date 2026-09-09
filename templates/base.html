@@ -2,13 +2,30 @@
 {%- set meta_title = page.title ~ " · " ~ config.title -%}
 {%- set meta_description = page.description -%}
 {%- set meta_url = page.permalink -%}
+{%- set alternates = page.translations -%}
+{%- elif section is defined -%}
+{%- set meta_title = config.title -%}
+{%- set meta_description = section.description -%}
+{%- set meta_url = section.permalink -%}
+{%- set alternates = section.translations -%}
 {%- else -%}
 {%- set meta_title = config.title -%}
 {%- set meta_description = config.description -%}
 {%- set meta_url = config.base_url ~ "/" -%}
+{%- set alternates = [] -%}
 {%- endif -%}
+{#- Adresse de la page equivalente dans chaque langue : la traduction si elle
+    existe, sinon l'accueil de cette langue. -#}
+{%- set_global url_fr = get_url(path="/", lang="fr", trailing_slash=true) -%}
+{%- set_global url_en = get_url(path="/", lang="en", trailing_slash=true) -%}
+{%- if lang == "fr" %}{% set_global url_fr = meta_url %}{% endif -%}
+{%- if lang == "en" %}{% set_global url_en = meta_url %}{% endif -%}
+{%- for t in alternates -%}
+{%- if t.lang == "fr" %}{% set_global url_fr = t.permalink %}{% endif -%}
+{%- if t.lang == "en" %}{% set_global url_en = t.permalink %}{% endif -%}
+{%- endfor -%}
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="{{ lang }}">
 
 <head>
   <meta charset="utf-8">
@@ -17,10 +34,13 @@
   <meta name="description" content="{{ meta_description }}">
   <meta name="author" content="{{ config.title }}">
   <link rel="canonical" href="{{ meta_url }}">
+  <link rel="alternate" hreflang="fr" href="{{ url_fr }}">
+  <link rel="alternate" hreflang="en" href="{{ url_en }}">
+  <link rel="alternate" hreflang="x-default" href="{{ url_fr }}">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="{{ config.title }}">
-  <meta property="og:locale" content="fr_BE">
+  <meta property="og:locale" content="{{ trans(key='og_locale', lang=lang) }}">
   <meta property="og:title" content="{{ meta_title }}">
   <meta property="og:description" content="{{ meta_description }}">
   <meta property="og:url" content="{{ meta_url }}">
@@ -39,19 +59,33 @@
 </head>
 
 <body>
-  <a class="skip" href="#contenu">Aller au contenu</a>
+  <a class="skip" href="#contenu">{{ trans(key="skip", lang=lang) }}</a>
+
+  {%- set home = get_url(path="/", lang=lang, trailing_slash=true) -%}
+  {%- set demo_url = get_url(path="@/demo.md", lang=lang) -%}
 
   <div class="shell">
     <header class="masthead">
-      <a class="identity" href="{{ get_url(path='/') }}">
+      <a class="identity" href="{{ home }}">
         <span class="identity__name">{{ config.title }}</span>
-        <span class="identity__role">{{ config.extra.role }}</span>
+        <span class="identity__role">{{ trans(key="role", lang=lang) }}</span>
       </a>
-      <nav class="nav" aria-label="Navigation principale">
-        {% for item in config.extra.nav %}
-        <a href="{{ item.url }}">{{ item.label }}</a>
-        {% endfor %}
-        <a class="nav__cta" href="/#contact">Contact</a>
+      <nav class="nav" aria-label="{{ trans(key='nav_aria', lang=lang) }}">
+        <a href="{{ home }}#services">{{ trans(key="nav_services", lang=lang) }}</a>
+        <a href="{{ home }}#methode">{{ trans(key="nav_method", lang=lang) }}</a>
+        <a href="{{ home }}#travaux">{{ trans(key="nav_work", lang=lang) }}</a>
+        <a href="{{ demo_url }}">{{ trans(key="nav_demo", lang=lang) }}</a>
+        <a href="{{ home }}#profil">{{ trans(key="nav_profile", lang=lang) }}</a>
+        <a class="nav__cta" href="{{ home }}#contact">{{ trans(key="nav_contact", lang=lang) }}</a>
+        <span class="langs" role="group" aria-label="{{ trans(key='langs_aria', lang=lang) }}">
+          {%- if lang == "fr" %}
+          <span class="langs__item is-active" aria-current="true">FR</span>
+          <a class="langs__item" href="{{ url_en }}" hreflang="en" lang="en">EN</a>
+          {%- else %}
+          <a class="langs__item" href="{{ url_fr }}" hreflang="fr" lang="fr">FR</a>
+          <span class="langs__item is-active" aria-current="true">EN</span>
+          {%- endif %}
+        </span>
       </nav>
     </header>
 
@@ -61,7 +95,7 @@
 
     <footer class="footer">
       <span>&copy; 2026 {{ config.title }}</span>
-      <nav class="footer__links" aria-label="Liens de contact">
+      <nav class="footer__links" aria-label="{{ trans(key='footer_aria', lang=lang) }}">
         <a href="mailto:{{ config.extra.email }}">{{ config.extra.email }}</a>
         <a href="{{ config.extra.linkedin }}" rel="me noopener">LinkedIn</a>
         <a href="{{ config.extra.github }}" rel="me noopener">GitHub</a>

@@ -12,6 +12,11 @@
   var root = document.querySelector('[data-digits]');
   if (!root) return;
 
+  // Libelles et format des nombres fournis par le gabarit, une fois par langue.
+  var LOCALE = root.getAttribute('data-locale') || 'fr-BE';
+  var LABEL_STATUS = root.getAttribute('data-label-status') || '{arch} · {acc} %';
+  var LABEL_ERROR = root.getAttribute('data-label-error') || '';
+
   var SIDE = 28;
   var FIT = 20;              // le chiffre occupe 20 px sur 28, comme dans MNIST
   var THRESHOLD = 24;
@@ -73,14 +78,14 @@
           h: new Float32Array(hidden),
           logits: new Float32Array(nout)
         };
-        status.textContent = 'Perceptron ' + raw.arch.join('-') + ' · '
-          + String(Math.round(raw.acc * 1000) / 10).replace('.', ',')
-          + ' % sur le jeu de test MNIST.';
+        status.textContent = LABEL_STATUS
+          .replace('{arch}', raw.arch.join('-'))
+          .replace('{acc}', (Math.round(raw.acc * 1000) / 10).toLocaleString(LOCALE));
         // Le visiteur a pu dessiner pendant le telechargement des poids.
         run();
       })
       .catch(function () {
-        status.textContent = 'Le modèle n’a pas pu être chargé. Le reste de la page fonctionne.';
+        status.textContent = LABEL_ERROR;
       });
   }
 
