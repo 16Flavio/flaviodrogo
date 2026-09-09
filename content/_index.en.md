@@ -75,10 +75,10 @@ title = "Delivery and handover"
 body = "Documented code, full access, a walkthrough with your teams. You own everything."
 
 [[extra.travaux]]
-icon = "matrix"
-eyebrow = "Publication · EUSIPCO 2026"
-title = "An Evolutionary Algorithm for Discrete Factorization Problems"
-body = "A paper presented at EUSIPCO 2026 in Bruges, with Nicolas Gillis and Arnaud Vandaele. An evolutionary approach to factorization problems whose factors are constrained to discrete values."
+icon = "route"
+eyebrow = "University project · autumn 2025"
+title = "Collection routes for Bruxelles-Propreté"
+body = "Operations research project, September to December 2025, on the routes of the Brussels waste collection agency: up to a hundred vehicles and two collection points across the Brussels area. A C++ heuristic written for the occasion removes up to 20 % of the trucks for the same service."
 
 [[extra.travaux]]
 icon = "network"
@@ -87,8 +87,8 @@ title = "Deep learning models at Vesuvius"
 body = "Development of deep learning models within the industrial group, on production data."
 
 [[extra.travaux]]
-icon = "tree"
-eyebrow = "Research · ongoing"
-title = "An exact C++ solver for boolean factorization"
-body = "A solver that looks for the best boolean factorization of a matrix rather than a good approximation. Written in C++ to get everything the language can give. Not published yet."
+icon = "matrix"
+eyebrow = "Publication · EUSIPCO 2026"
+title = "An Evolutionary Algorithm for Discrete Factorization Problems"
+body = "A paper presented at EUSIPCO 2026 in Bruges, with Nicolas Gillis and Arnaud Vandaele. An evolutionary approach to factorization problems whose factors are constrained to discrete values."
 +++

@@ -75,10 +75,10 @@ title = "Livraison et transfert"
 body = "Code documenté, accès complet, prise en main avec vos équipes. Vous restez propriétaire de tout."
 
 [[extra.travaux]]
-icon = "matrix"
-eyebrow = "Publication · EUSIPCO 2026"
-title = "An Evolutionary Algorithm for Discrete Factorization Problems"
-body = "Communication présentée à EUSIPCO 2026 à Bruges, avec Nicolas Gillis et Arnaud Vandaele. Une approche évolutionnaire pour les problèmes de factorisation dont les facteurs sont contraints à des valeurs discrètes."
+icon = "route"
+eyebrow = "Projet universitaire · automne 2025"
+title = "Tournées de collecte pour Bruxelles-Propreté"
+body = "Projet du cours de recherche opérationnelle, de septembre à décembre 2025 : jusqu'à une centaine de véhicules et deux points de collecte dans la zone bruxelloise. Une heuristique écrite en C++ pour l'occasion retire jusqu'à 20 % des camions à service identique."
 
 [[extra.travaux]]
 icon = "network"
@@ -87,8 +87,8 @@ title = "Modèles de deep learning chez Vesuvius"
 body = "Développement de modèles de deep learning au sein du groupe industriel, sur des données de production."
 
 [[extra.travaux]]
-icon = "tree"
-eyebrow = "Recherche · en cours"
-title = "Solveur exact en C++ pour la factorisation booléenne"
-body = "Un solveur qui cherche la meilleure factorisation booléenne d'une matrice plutôt qu'une bonne approximation. Écrit en C++ pour tirer du langage tout ce qu'il peut donner. Pas encore publié."
+icon = "matrix"
+eyebrow = "Publication · EUSIPCO 2026"
+title = "An Evolutionary Algorithm for Discrete Factorization Problems"
+body = "Communication présentée à EUSIPCO 2026 à Bruges, avec Nicolas Gillis et Arnaud Vandaele. Une approche évolutionnaire pour les problèmes de factorisation dont les facteurs sont contraints à des valeurs discrètes."
 +++
