@@ -16,14 +16,14 @@ profil_title = "Qui vous répondra"
 profil_lead = "Ingénieur civil en informatique et gestion, finalité spécialisée en <em>Artificial Intelligence and Decision Aid</em>. L'optimisation m'intéresse dans ses deux acceptions : au sens mathématique (formuler un problème de décision et le résoudre) et au sens du code, en allant chercher ce que les langages compilés ont réellement à offrir."
 profil_body = "Mon travail consiste autant à écrire ce code qu'à traduire un besoin métier en une solution proportionnée. Souvent, la bonne réponse est plus simple qu'un modèle d'apprentissage, et je le dis quand c'est le cas."
 profil_note = "Participation aux concours de programmation BAPC et NWERC en 2024 et en 2025."
-skills = ["Python", "C++", "PyTorch", "JavaScript", "SQL", "Git"]
+skills = ["Python", "C++", "PyTorch", "Java", "SQL", "Git"]
 
 contact_title = "Décrivez votre problème, je vous dis s'il est soluble."
-contact_lead = "Premier échange sans engagement, réponse sous deux jours ouvrables. Si votre besoin ne relève pas de mes compétences, je vous le dirai plutôt que de vous vendre autre chose."
+contact_lead = "Premier échange sans engagement. Si votre besoin ne relève pas de mes compétences, je vous le dirai plutôt que de vous vendre autre chose."
 
 demo_eyebrow = "Démonstration"
-demo_title = "Deux réseaux de neurones qui tournent dans votre navigateur"
-demo_body = "Le premier surveille le capteur d'une machine : entraîné sur du fonctionnement normal, il signale les incidents que vous provoquez. Le second reconnaît un chiffre que vous tracez à la souris. Aucun serveur, aucune librairie : la rétropropagation tient dans le fichier JavaScript de la page."
+demo_title = "Un aperçu de ce que pourrait être votre application"
+demo_body = "Deux outils à essayer, du même genre que ceux que je livre. Le premier surveille le capteur d'une machine : entraîné sur du fonctionnement normal, il signale les incidents que vous provoquez. Le second lit un chiffre que vous tracez à la main. À vous de voir ce que ça donnerait sur vos données."
 demo_cta = "Ouvrir la démonstration"
 
 [[extra.facts]]

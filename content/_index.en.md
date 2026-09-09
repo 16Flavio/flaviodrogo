@@ -16,14 +16,14 @@ profil_title = "Who will answer you"
 profil_lead = "MSc in Computer Science and Management Engineering, specialised in <em>Artificial Intelligence and Decision Aid</em>. Optimisation interests me in both of its meanings: the mathematical one (formulating a decision problem and solving it) and the one that belongs to code, going after what compiled languages really have to offer."
 profil_body = "My work is as much about writing that code as it is about turning a business need into a solution of the right size. Often the right answer is simpler than a learning model, and I say so when that is the case."
 profil_note = "Took part in the BAPC and NWERC programming contests in 2024 and 2025."
-skills = ["Python", "C++", "PyTorch", "JavaScript", "SQL", "Git"]
+skills = ["Python", "C++", "PyTorch", "Java", "SQL", "Git"]
 
 contact_title = "Describe your problem and I will tell you whether it can be solved."
-contact_lead = "A first conversation with no strings attached, answered within two working days. If your need falls outside my skills, I will say so rather than sell you something else."
+contact_lead = "A first conversation with no strings attached. If your need falls outside my skills, I will say so rather than sell you something else."
 
 demo_eyebrow = "Demo"
-demo_title = "Two neural networks running in your browser"
-demo_body = "The first one watches the sensor of a machine: trained on normal operation, it flags the incidents you trigger. The second recognises a digit you draw with the mouse. No server, no library: backpropagation fits inside the JavaScript file of the page."
+demo_title = "A glimpse of what your own application could be"
+demo_body = "Two tools to try out, of the kind I deliver. The first watches the sensor of a machine: trained on normal operation, it flags the incidents you trigger. The second reads a digit you draw by hand. Up to you to picture what that would give on your own data."
 demo_cta = "Open the demo"
 
 [[extra.facts]]
