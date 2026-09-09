@@ -1,6 +1,6 @@
 +++
 title = "Demo"
-description = "Two neural networks written by hand in JavaScript: one learns a decision boundary before your eyes, the other recognises a digit you draw."
+description = "Two neural networks written by hand in JavaScript: one watches a sensor and flags anomalies, the other recognises a digit you draw."
 template = "demo.html"
 
 [extra]
@@ -8,10 +8,10 @@ eyebrow = "Demo"
 heading = "Two neural networks, written by hand"
 intro = "Both demos run entirely inside your browser. No data is sent anywhere, no learning library is loaded: the forward pass and backpropagation are written by hand in the two JavaScript files of this page."
 
-lab_eyebrow = "01 · A network that learns"
-lab_title = "Decision boundary, live"
-lab_body = "Pick a point set, an optimiser and an architecture, then start training. The background of the map is the prediction of the network at every point of the plane: it bends at each gradient descent step. You can also click inside the map to add your own points and watch the network adapt to them."
-lab_note = "Compare Adam and plain gradient descent on the spiral: on a real problem, that is the kind of gap that separates a model which converges from one you give up on."
+monitor_eyebrow = "01 · Anomaly detection"
+monitor_title = "Monitoring a machine that has never broken down"
+monitor_body = "A vibration sensor streams a reading continuously. When the page loads, an autoencoder learns to reconstruct a forty-reading window of normal operation, then sets its own alert threshold on normal windows it has never seen. In service, the gap between the real signal and its reconstruction is the score. Trigger an incident with the buttons: the score breaks away as soon as the signal leaves the regime it learned, including while a drift is still invisible to the eye."
+monitor_note = "The model has never seen a failure: it was only ever shown normal operation. That is what makes the approach usable in industry, where faults are rare, almost never labelled, and seldom twice the same."
 
 digit_eyebrow = "02 · Digit recognition"
 digit_title = "Draw a digit"

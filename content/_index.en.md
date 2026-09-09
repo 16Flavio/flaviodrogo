@@ -23,7 +23,7 @@ contact_lead = "A first conversation with no strings attached, answered within t
 
 demo_eyebrow = "Demo"
 demo_title = "Two neural networks running in your browser"
-demo_body = "The first one learns to separate two clouds of points before your eyes: you pick the optimiser and the depth of the network, and you watch the decision boundary take shape. The second recognises a digit you draw with the mouse. No server, no library: backpropagation fits inside the JavaScript file of the page."
+demo_body = "The first one watches the sensor of a machine: trained on normal operation, it flags the incidents you trigger. The second recognises a digit you draw with the mouse. No server, no library: backpropagation fits inside the JavaScript file of the page."
 demo_cta = "Open the demo"
 
 [[extra.facts]]

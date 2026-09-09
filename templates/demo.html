@@ -9,100 +9,75 @@
   <p class="lead">{{ c.intro }}</p>
 </section>
 
-<section class="band band--stack" id="lab">
+<section class="band band--stack" id="capteur">
   <div class="band__head band__head--wide">
-    <span class="eyebrow">{{ c.lab_eyebrow }}</span>
-    <h2 class="heading">{{ c.lab_title }}</h2>
-    <p class="demo-body">{{ c.lab_body }}</p>
+    <span class="eyebrow">{{ c.monitor_eyebrow }}</span>
+    <h2 class="heading">{{ c.monitor_title }}</h2>
+    <p class="demo-body">{{ c.monitor_body }}</p>
   </div>
 
-  <div class="lab" data-lab data-locale="{{ trans(key='locale', lang=lang) }}"
-    data-label-run="{{ trans(key='lab_run', lang=lang) }}" data-label-pause="{{ trans(key='lab_pause', lang=lang) }}">
-    <div class="lab__stage">
-      <canvas class="lab__canvas" data-lab-canvas width="520" height="520"
-        aria-label="{{ trans(key='lab_map_aria', lang=lang) }}"></canvas>
-      <div class="lab__hint">{{ trans(key='lab_hint', lang=lang) }}</div>
+  <div class="monitor" data-monitor data-locale="{{ trans(key='locale', lang=lang) }}"
+    data-label-pause="{{ trans(key='mon_pause', lang=lang) }}"
+    data-label-resume="{{ trans(key='mon_resume', lang=lang) }}"
+    data-label-normal="{{ trans(key='mon_normal', lang=lang) }}"
+    data-label-alert="{{ trans(key='mon_alert', lang=lang) }}"
+    data-label-calibrating="{{ trans(key='mon_calibrating', lang=lang) }}"
+    data-label-ready="{{ trans(key='mon_ready', lang=lang) }}">
+    <div class="monitor__stage">
+      <canvas class="monitor__signal" data-monitor-signal width="880" height="320"
+        aria-label="{{ trans(key='mon_signal_aria', lang=lang) }}"></canvas>
+
+      <ul class="legend">
+        <li class="legend__item"><span class="legend__swatch legend__swatch--measure"></span>{{
+          trans(key='mon_legend_measure', lang=lang) }}</li>
+        <li class="legend__item"><span class="legend__swatch legend__swatch--model"></span>{{
+          trans(key='mon_legend_model', lang=lang) }}</li>
+        <li class="legend__item"><span class="legend__swatch legend__swatch--alert"></span>{{
+          trans(key='mon_legend_alert', lang=lang) }}</li>
+      </ul>
+
+      <canvas class="monitor__score" data-monitor-score width="880" height="120"
+        aria-label="{{ trans(key='mon_score_aria', lang=lang) }}"></canvas>
+      <p class="monitor__caption">{{ trans(key='mon_caption', lang=lang) }}</p>
     </div>
 
-    <div class="lab__side">
+    <div class="monitor__side">
       <div class="readouts">
         <div class="readout">
-          <span class="readout__label">{{ trans(key='lab_steps', lang=lang) }}</span>
-          <span class="readout__value" data-lab-steps>0</span>
+          <span class="readout__label">{{ trans(key='mon_gap', lang=lang) }}</span>
+          <span class="readout__value" data-monitor-gap>…</span>
         </div>
         <div class="readout">
-          <span class="readout__label">{{ trans(key='lab_loss', lang=lang) }}</span>
-          <span class="readout__value" data-lab-loss>…</span>
+          <span class="readout__label">{{ trans(key='mon_state', lang=lang) }}</span>
+          <span class="readout__value readout__value--state" data-monitor-state>…</span>
         </div>
         <div class="readout">
-          <span class="readout__label">{{ trans(key='lab_acc', lang=lang) }}</span>
-          <span class="readout__value" data-lab-acc>…</span>
+          <span class="readout__label">{{ trans(key='mon_alerts', lang=lang) }}</span>
+          <span class="readout__value" data-monitor-alerts>0</span>
         </div>
       </div>
 
-      <canvas class="lab__curve" data-lab-curve width="600" height="120"
-        aria-label="{{ trans(key='lab_curve_aria', lang=lang) }}"></canvas>
-
-      <div class="controls">
-        <label class="control">
-          <span class="control__label">{{ trans(key='lab_dataset', lang=lang) }}</span>
-          <select data-lab-control="dataset">
-            <option value="spiral">{{ trans(key='lab_dataset_spiral', lang=lang) }}</option>
-            <option value="circles">{{ trans(key='lab_dataset_circles', lang=lang) }}</option>
-            <option value="moons">{{ trans(key='lab_dataset_moons', lang=lang) }}</option>
-            <option value="xor">{{ trans(key='lab_dataset_xor', lang=lang) }}</option>
-          </select>
-        </label>
-
-        <label class="control">
-          <span class="control__label">{{ trans(key='lab_optimizer', lang=lang) }}</span>
-          <select data-lab-control="optimizer">
-            <option value="adam">Adam</option>
-            <option value="momentum">Momentum</option>
-            <option value="sgd">{{ trans(key='lab_optimizer_sgd', lang=lang) }}</option>
-          </select>
-        </label>
-
-        <label class="control">
-          <span class="control__label">{{ trans(key='lab_arch', lang=lang) }}</span>
-          <select data-lab-control="arch">
-            <option value="8,8">{{ trans(key='lab_arch_2x8', lang=lang) }}</option>
-            <option value="16,16" selected>{{ trans(key='lab_arch_2x16', lang=lang) }}</option>
-            <option value="24,24,24">{{ trans(key='lab_arch_3x24', lang=lang) }}</option>
-            <option value="4">{{ trans(key='lab_arch_1x4', lang=lang) }}</option>
-          </select>
-        </label>
-
-        <label class="control">
-          <span class="control__label">{{ trans(key='lab_activation', lang=lang) }}</span>
-          <select data-lab-control="activation">
-            <option value="tanh">tanh</option>
-            <option value="relu">ReLU</option>
-          </select>
-        </label>
-
-        <label class="control control--wide">
-          <span class="control__label">{{ trans(key='lab_lr', lang=lang) }} <output data-lab-lrout></output></span>
-          <input type="range" data-lab-control="lr" min="-3" max="-0.7" step="0.05" value="-1.52">
-        </label>
-
-        <div class="control control--wide">
-          <span class="control__label">{{ trans(key='lab_paint', lang=lang) }}</span>
-          <div class="segmented" role="group" aria-label="{{ trans(key='lab_paint', lang=lang) }}">
-            <button type="button" class="segmented__btn is-active" data-lab-class="1">{{
-              trans(key='lab_class_orange', lang=lang) }}</button>
-            <button type="button" class="segmented__btn" data-lab-class="0">{{
-              trans(key='lab_class_blue', lang=lang) }}</button>
-          </div>
+      <div class="control">
+        <span class="control__label">{{ trans(key='mon_inject', lang=lang) }}</span>
+        <div class="injects" role="group" aria-label="{{ trans(key='mon_inject', lang=lang) }}">
+          <button type="button" class="btn btn--ghost" data-monitor-inject="spike">{{
+            trans(key='mon_spike', lang=lang) }}</button>
+          <button type="button" class="btn btn--ghost" data-monitor-inject="drop">{{
+            trans(key='mon_drop', lang=lang) }}</button>
+          <button type="button" class="btn btn--ghost" data-monitor-inject="drift">{{
+            trans(key='mon_drift', lang=lang) }}</button>
+          <button type="button" class="btn btn--ghost" data-monitor-inject="noise">{{
+            trans(key='mon_noise', lang=lang) }}</button>
         </div>
       </div>
 
       <div class="actions actions--tight">
-        <button type="button" class="btn" data-lab-run>{{ trans(key='lab_run', lang=lang) }}</button>
-        <button type="button" class="btn btn--ghost" data-lab-reset>{{ trans(key='lab_reset', lang=lang) }}</button>
+        <button type="button" class="btn" data-monitor-toggle>{{ trans(key='mon_pause', lang=lang) }}</button>
+        <button type="button" class="btn btn--ghost" data-monitor-reset>{{ trans(key='mon_reset', lang=lang) }}</button>
       </div>
 
-      <p class="note">{{ c.lab_note }}</p>
+      <p class="monitor__status" data-monitor-status>{{ trans(key='mon_calibrating', lang=lang) }}</p>
+      <p class="note">{{ c.monitor_note }}</p>
     </div>
   </div>
 </section>
@@ -157,6 +132,6 @@
 {% endblock %}
 
 {% block head %}
-<script src="{{ get_url(path='js/playground.js', cachebust=true) }}" defer></script>
+<script src="{{ get_url(path='js/monitor.js', cachebust=true) }}" defer></script>
 <script src="{{ get_url(path='js/digits.js', cachebust=true) }}" defer></script>
 {% endblock %}

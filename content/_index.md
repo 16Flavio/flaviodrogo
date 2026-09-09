@@ -23,7 +23,7 @@ contact_lead = "Premier échange sans engagement, réponse sous deux jours ouvra
 
 demo_eyebrow = "Démonstration"
 demo_title = "Deux réseaux de neurones qui tournent dans votre navigateur"
-demo_body = "Le premier apprend sous vos yeux à séparer deux nuages de points : vous choisissez l'optimiseur, la profondeur du réseau, et vous regardez la frontière de décision se former. Le second reconnaît un chiffre que vous tracez à la souris. Aucun serveur, aucune librairie : la rétropropagation tient dans le fichier JavaScript de la page."
+demo_body = "Le premier surveille le capteur d'une machine : entraîné sur du fonctionnement normal, il signale les incidents que vous provoquez. Le second reconnaît un chiffre que vous tracez à la souris. Aucun serveur, aucune librairie : la rétropropagation tient dans le fichier JavaScript de la page."
 demo_cta = "Ouvrir la démonstration"
 
 [[extra.facts]]

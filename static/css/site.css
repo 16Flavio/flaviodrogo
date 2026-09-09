@@ -747,39 +747,79 @@ a.langs__item:hover {
   color: var(--body);
 }
 
-/* ------------------------------------------------------- 01. le playground */
+/* --------------------------------------------- 01. la surveillance capteur */
 
-.lab {
+.monitor {
   display: grid;
-  grid-template-columns: minmax(0, 1.05fr) minmax(300px, 0.95fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
   gap: 36px;
   align-items: start;
 }
 
-.lab__stage {
+.monitor__stage {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
+  min-width: 0;
 }
 
-.lab__canvas {
+.monitor__signal {
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1;
+  aspect-ratio: 22 / 9;
   border: 1px solid var(--rule);
   border-radius: 2px;
   background: var(--panel);
-  cursor: crosshair;
-  touch-action: manipulation;
 }
 
-.lab__hint {
+.monitor__score {
+  display: block;
+  width: 100%;
+  height: 96px;
+  border-bottom: 1px solid var(--rule);
+}
+
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
   font-size: 13px;
   color: var(--muted);
 }
 
-.lab__side {
+.legend__item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend__swatch {
+  width: 18px;
+  height: 0;
+  border-top: 2px solid var(--ink);
+}
+
+.legend__swatch--model {
+  border-top-style: dashed;
+  border-top-color: var(--accent);
+}
+
+.legend__swatch--alert {
+  height: 12px;
+  border-top: none;
+  background: rgba(180, 83, 31, 0.16);
+}
+
+.monitor__caption {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.monitor__side {
   display: flex;
   flex-direction: column;
   gap: 22px;
@@ -817,80 +857,36 @@ a.langs__item:hover {
   color: var(--ink);
 }
 
-.lab__curve {
-  display: block;
-  width: 100%;
-  height: 84px;
-  border-bottom: 1px solid var(--rule);
+.readout__value--state {
+  font-size: 15px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  align-self: start;
 }
 
-.controls {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
+.readout__value.is-alert {
+  color: var(--accent);
 }
 
 .control {
   display: flex;
   flex-direction: column;
-  gap: 6px;
+  gap: 8px;
   min-width: 0;
 }
 
-.control--wide {
-  grid-column: 1 / -1;
+.injects {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
 }
 
-.control select {
-  width: 100%;
-  padding: 9px 10px;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  background: var(--panel);
-  color: var(--ink);
-  font-family: inherit;
-  font-size: 14px;
-}
-
-.control output {
-  font-family: var(--mono);
-  font-variant-numeric: tabular-nums;
-  text-transform: none;
-  letter-spacing: 0;
-  color: var(--ink);
-}
-
-.control input[type="range"] {
-  width: 100%;
-  accent-color: var(--accent);
-}
-
-.segmented {
-  display: flex;
-  border: 1px solid var(--line);
-  border-radius: 2px;
-  overflow: hidden;
-}
-
-.segmented__btn {
-  flex: 1;
-  padding: 9px 12px;
-  border: none;
-  border-right: 1px solid var(--line);
-  background: var(--panel);
-  color: var(--body);
-  font-family: inherit;
-  font-size: 14px;
+.injects .btn {
+  padding: 10px 8px;
+  font-size: 13px;
+  text-align: center;
   cursor: pointer;
-}
-
-.segmented__btn:last-child {
-  border-right: none;
-}
-
-.segmented__btn.is-active {
-  background: var(--ink);
-  color: var(--paper);
+  font-family: inherit;
 }
 
 .actions--tight {
@@ -902,6 +898,11 @@ a.langs__item:hover {
   font-size: 14px;
   cursor: pointer;
   font-family: inherit;
+}
+
+.monitor__status {
+  font-size: 13px;
+  color: var(--muted);
 }
 
 /* --------------------------------------------------------- 02. les chiffres */
@@ -1021,13 +1022,12 @@ a.langs__item:hover {
 
 @media (max-width: 900px) {
 
-  .lab,
+  .monitor,
   .digits {
     grid-template-columns: minmax(0, 1fr);
     gap: 28px;
   }
 
-  .lab__stage,
   .digits__pad {
     max-width: 520px;
   }
