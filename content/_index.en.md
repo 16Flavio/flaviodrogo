@@ -9,7 +9,7 @@ hero_cta = "Let's talk about your problem"
 hero_cta_alt = "See the demo"
 
 services_title = "Four ways of working together"
-methode_title = "From the first call to production"
+methode_title = "From the first conversation to production"
 travaux_title = "What I have worked on"
 profil_title = "Who will answer you"
 
@@ -59,8 +59,8 @@ title = "Applications and automation"
 body = "A website, an internal tool, a recurring task that eats up your days. The least spectacular part of the job, and often the one that pays for itself fastest."
 
 [[extra.methode]]
-title = "Free scoping call"
-body = "One hour on the phone to understand the problem, the data actually available, and what matters to you."
+title = "Free scoping"
+body = "A free conversation, by phone, over video or, preferably, in person, for as long as it takes. It is there to frame the problem: the outcome you expect, the data actually available, and what matters to you."
 
 [[extra.methode]]
 title = "Quoted proposal"

@@ -9,7 +9,7 @@ hero_cta = "Parlons de votre problème"
 hero_cta_alt = "Voir la démonstration"
 
 services_title = "Quatre façons de travailler ensemble"
-methode_title = "Du premier appel à la mise en production"
+methode_title = "Du premier échange à la mise en production"
 travaux_title = "Ce sur quoi j'ai travaillé"
 profil_title = "Qui vous répondra"
 
@@ -60,7 +60,7 @@ body = "Site, outil interne, traitement récurrent qui mange vos journées. La p
 
 [[extra.methode]]
 title = "Cadrage gratuit"
-body = "Un appel d'une heure pour comprendre le problème, les données réellement disponibles, et ce qui compte pour vous."
+body = "Un échange gratuit, par téléphone, en visio ou, de préférence, sur place, aussi long qu'il le faut. Il sert à cadrer le problème : le résultat que vous attendez, les données réellement disponibles, et ce qui compte pour vous."
 
 [[extra.methode]]
 title = "Proposition chiffrée"
