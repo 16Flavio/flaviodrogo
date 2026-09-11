@@ -1,10 +1,10 @@
 +++
 title = "Flavio Drogo"
-description = "Optimisation, apprentissage automatique et développement logiciel. Ingénieur civil en informatique et gestion, finalité Artificial Intelligence and Decision Aid."
+description = "Je conçois des outils qui organisent, prévoient et automatisent. Ingénieur civil en informatique et gestion, spécialisé en intelligence artificielle et aide à la décision."
 
 [extra]
-hero_title = "L'optimisation et l'apprentissage automatique appliqués à vos <em>problèmes concrets</em>."
-hero_lead = "Je modélise des problèmes de décision (planification, allocation, prévision) et je livre l'outil qui les résout. De la première analyse au code en production, un seul interlocuteur."
+hero_title = "Organiser, prévoir, automatiser : <em>un outil taillé pour votre problème</em>."
+hero_lead = "Un planning à refaire chaque semaine, des tournées à organiser, une prévision à établir, un fichier à retraiter à la main : ce sont des problèmes qui se règlent une bonne fois. Je construis l'outil qui s'en charge, et je reste votre seul interlocuteur du premier échange à la mise en service."
 hero_cta = "Parlons de votre problème"
 hero_cta_alt = "Voir la démonstration"
 
@@ -13,9 +13,9 @@ methode_title = "Du premier échange à la mise en production"
 travaux_title = "Ce sur quoi j'ai travaillé"
 profil_title = "Qui vous répondra"
 
-profil_lead = "Ingénieur civil en informatique et gestion, finalité spécialisée en <em>Artificial Intelligence and Decision Aid</em>. L'optimisation m'intéresse dans ses deux acceptions : au sens mathématique (formuler un problème de décision et le résoudre) et au sens du code, en allant chercher ce que les langages compilés ont réellement à offrir."
-profil_body = "Mon travail consiste autant à écrire ce code qu'à traduire un besoin métier en une solution proportionnée. Souvent, la bonne réponse est plus simple qu'un modèle d'apprentissage, et je le dis quand c'est le cas."
-profil_note = "Participation aux concours de programmation BAPC et NWERC en 2024 et en 2025."
+profil_lead = "Ingénieur civil en informatique et gestion, spécialisé en <em>intelligence artificielle et aide à la décision</em>. Deux choses m'intéressent : trouver la meilleure décision quand les possibilités sont trop nombreuses pour être essayées une à une, et écrire du code qui va vite."
+profil_body = "Mon travail consiste autant à écrire ce code qu'à traduire un besoin en une solution de la bonne taille. Souvent, la bonne réponse est plus simple qu'un modèle d'intelligence artificielle, et je le dis quand c'est le cas."
+profil_note = "Participation aux concours internationaux de programmation BAPC et NWERC, en 2024 et en 2025."
 skills = ["Python", "C++", "PyTorch", "Java", "SQL", "Git"]
 
 contact_title = "Décrivez votre problème, je vous dis s'il est soluble."
@@ -28,11 +28,11 @@ demo_cta = "Ouvrir la démonstration"
 
 [[extra.facts]]
 label = "Formation"
-value = "Ingénieur civil en informatique et gestion, finalité spécialisée en Artificial Intelligence and Decision Aid."
+value = "Ingénieur civil en informatique et gestion, spécialisation en intelligence artificielle et aide à la décision."
 
 [[extra.facts]]
 label = "Domaines"
-value = "Optimisation combinatoire, apprentissage profond, calcul performant en langages compilés."
+value = "Organisation et planification, modèles de prévision et de détection, calculs lourds rendus rapides."
 
 [[extra.facts]]
 label = "Disponibilité"
@@ -40,23 +40,23 @@ value = "Belgique, sur site ou à distance. Missions courtes ou accompagnement c
 
 [[extra.services]]
 key = "A"
-title = "Optimisation et aide à la décision"
-body = "Planification, ordonnancement, tournées, allocation de ressources. Je formule le problème, je le résous, et je chiffre l'écart avec votre méthode actuelle."
+title = "Organiser et planifier"
+body = "Des tournées, des horaires, des équipes, des machines à répartir. Quand les combinaisons sont trop nombreuses pour être essayées une à une, un programme va chercher la meilleure. Je vous montre ensuite ce qu'elle change par rapport à votre façon de faire aujourd'hui."
 
 [[extra.services]]
 key = "B"
-title = "Modèles d'apprentissage"
-body = "Prévision, classification, détection d'anomalies. Un modèle entraîné sur vos données et évalué sans complaisance, y compris quand le verdict est qu'il ne tient pas ses promesses."
+title = "Prévoir et détecter"
+body = "Prévoir une demande, trier automatiquement des documents, repérer une anomalie avant qu'elle ne devienne une panne. Le modèle apprend sur vos données, et je vous dis franchement ce qu'il vaut, y compris quand la réponse est qu'il ne tient pas ses promesses."
 
 [[extra.services]]
 key = "C"
-title = "Calcul performant"
-body = "Un traitement qui prend des heures. Profilage, puis réécriture du noyau critique en C++. Le gain est mesuré avant et après, pas annoncé à l'avance."
+title = "Accélérer les calculs"
+body = "Un traitement qui tourne toute la nuit, un export qui prend vingt minutes. Je cherche d'où vient la lenteur et je réécris ce qui doit l'être. Le gain est mesuré avant et après, pas annoncé à l'avance."
 
 [[extra.services]]
 key = "D"
 title = "Applications et automatisation"
-body = "Site, outil interne, traitement récurrent qui mange vos journées. La partie la moins spectaculaire du métier, souvent celle qui se rentabilise le plus vite."
+body = "Un site, un outil interne, une tâche répétitive qui mange vos journées. La partie la moins spectaculaire du métier, souvent celle qui se rentabilise le plus vite."
 
 [[extra.methode]]
 title = "Cadrage gratuit"
@@ -64,31 +64,31 @@ body = "Un échange gratuit, par téléphone, en visio ou, de préférence, sur 
 
 [[extra.methode]]
 title = "Proposition chiffrée"
-body = "Périmètre écrit, livrables, délai et prix fixe. Vous savez à quoi vous vous engagez avant de signer."
+body = "Par écrit : ce qui sera fait, ce que vous recevez, pour quand, et à quel prix fixe. Vous savez à quoi vous vous engagez avant de signer."
 
 [[extra.methode]]
 title = "Prototype rapide"
-body = "Une version utilisable le plus tôt possible, pour valider la direction avant d'investir dans le reste."
+body = "Une première version utilisable le plus tôt possible. Vous voyez où cela mène avant d'avoir tout payé."
 
 [[extra.methode]]
 title = "Livraison et transfert"
-body = "Code documenté, accès complet, prise en main avec vos équipes. Vous restez propriétaire de tout."
+body = "Code documenté, accès complet, et une prise en main avec les personnes qui s'en serviront. Vous restez propriétaire de tout."
 
 [[extra.travaux]]
 icon = "route"
 eyebrow = "Projet universitaire · automne 2025"
-title = "Tournées de collecte pour Bruxelles-Propreté"
-body = "Projet du cours de recherche opérationnelle, de septembre à décembre 2025 : jusqu'à une centaine de véhicules et deux points de collecte dans la zone bruxelloise. Une heuristique écrite en C++ pour l'occasion retire jusqu'à 20 % des camions à service identique."
+title = "Optimisation des tournées de ramassage des poubelles"
+body = "Projet du cours de recherche opérationnelle, de septembre à décembre 2025 : organiser le ramassage des poubelles d'une grande ville, avec une centaine de camions au départ de deux sites. Le programme écrit pour l'occasion, en C++, fait le même travail avec jusqu'à 20 % de camions en moins."
 
 [[extra.travaux]]
 icon = "network"
 eyebrow = "Stage · été 2026"
-title = "Modèles de deep learning chez Vesuvius"
-body = "Développement de modèles de deep learning au sein du groupe industriel, sur des données de production."
+title = "Développement de modèles pendant mon stage"
+body = "Développement de modèles d'apprentissage dans un groupe industriel, sur les données réelles de la production."
 
 [[extra.travaux]]
 icon = "matrix"
 eyebrow = "Publication · EUSIPCO 2026"
 title = "An Evolutionary Algorithm for Discrete Factorization Problems"
-body = "Communication présentée à EUSIPCO 2026 à Bruges, avec Nicolas Gillis et Arnaud Vandaele. Une approche évolutionnaire pour les problèmes de factorisation dont les facteurs sont contraints à des valeurs discrètes."
+body = "Article présenté à EUSIPCO 2026, à Bruges, avec Nicolas Gillis et Arnaud Vandaele. Il propose une façon de décomposer un grand tableau de données en deux tableaux plus simples, quand les valeurs autorisées sont fixées d'avance."
 +++

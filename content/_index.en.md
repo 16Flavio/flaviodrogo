@@ -1,10 +1,10 @@
 +++
 title = "Flavio Drogo"
-description = "Optimisation, machine learning and software development. MSc in Computer Science and Management Engineering, Artificial Intelligence and Decision Aid track."
+description = "I build tools that organise, forecast and automate. MSc in Computer Science and Management Engineering, specialised in artificial intelligence and decision aid."
 
 [extra]
-hero_title = "Optimisation and machine learning, applied to your <em>real problems</em>."
-hero_lead = "I model decision problems (planning, allocation, forecasting) and I deliver the tool that solves them. From the first analysis to production code, a single point of contact."
+hero_title = "Organise, forecast, automate: <em>a tool cut to your problem</em>."
+hero_lead = "A schedule to redo every week, routes to organise, a forecast to produce, a file to rework by hand: these are problems that can be settled once and for all. I build the tool that takes them over, and I remain your only point of contact from the first conversation to the day it goes live."
 hero_cta = "Let's talk about your problem"
 hero_cta_alt = "See the demo"
 
@@ -13,9 +13,9 @@ methode_title = "From the first conversation to production"
 travaux_title = "What I have worked on"
 profil_title = "Who will answer you"
 
-profil_lead = "MSc in Computer Science and Management Engineering, specialised in <em>Artificial Intelligence and Decision Aid</em>. Optimisation interests me in both of its meanings: the mathematical one (formulating a decision problem and solving it) and the one that belongs to code, going after what compiled languages really have to offer."
-profil_body = "My work is as much about writing that code as it is about turning a business need into a solution of the right size. Often the right answer is simpler than a learning model, and I say so when that is the case."
-profil_note = "Took part in the BAPC and NWERC programming contests in 2024 and 2025."
+profil_lead = "MSc in Computer Science and Management Engineering, specialised in <em>artificial intelligence and decision aid</em>. Two things interest me: finding the best decision when there are far too many options to try them one by one, and writing code that runs fast."
+profil_body = "My work is as much about writing that code as it is about turning a need into a solution of the right size. Often the right answer is simpler than an artificial intelligence model, and I say so when that is the case."
+profil_note = "Took part in the BAPC and NWERC international programming contests, in 2024 and 2025."
 skills = ["Python", "C++", "PyTorch", "Java", "SQL", "Git"]
 
 contact_title = "Describe your problem and I will tell you whether it can be solved."
@@ -28,11 +28,11 @@ demo_cta = "Open the demo"
 
 [[extra.facts]]
 label = "Education"
-value = "MSc in Computer Science and Management Engineering, specialised in Artificial Intelligence and Decision Aid."
+value = "MSc in Computer Science and Management Engineering, specialised in artificial intelligence and decision aid."
 
 [[extra.facts]]
 label = "Fields"
-value = "Combinatorial optimisation, deep learning, high performance computing in compiled languages."
+value = "Organising and planning, forecasting and detection models, heavy computations made fast."
 
 [[extra.facts]]
 label = "Availability"
@@ -40,23 +40,23 @@ value = "Belgium, on site or remote. Short assignments or continuous support. Fr
 
 [[extra.services]]
 key = "A"
-title = "Optimisation and decision support"
-body = "Planning, scheduling, routing, resource allocation. I formulate the problem, I solve it, and I put a number on the gap with your current method."
+title = "Organising and planning"
+body = "Routes, timetables, teams or machines to share out. When there are too many combinations to try them one by one, a program goes looking for the best one. I then show you what it changes compared with the way you work today."
 
 [[extra.services]]
 key = "B"
-title = "Machine learning models"
-body = "Forecasting, classification, anomaly detection. A model trained on your data and evaluated without indulgence, including when the verdict is that it does not live up to its promise."
+title = "Forecasting and detection"
+body = "Forecast demand, sort documents automatically, spot an anomaly before it turns into a breakdown. The model learns on your data, and I tell you plainly what it is worth, including when the answer is that it does not live up to its promise."
 
 [[extra.services]]
 key = "C"
-title = "High performance computing"
-body = "A job that takes hours. Profiling first, then a rewrite of the critical kernel in C++. The gain is measured before and after, not announced in advance."
+title = "Making computations faster"
+body = "A job that runs all night, an export that takes twenty minutes. I look for where the slowness comes from and rewrite what has to be rewritten. The gain is measured before and after, not announced in advance."
 
 [[extra.services]]
 key = "D"
 title = "Applications and automation"
-body = "A website, an internal tool, a recurring task that eats up your days. The least spectacular part of the job, and often the one that pays for itself fastest."
+body = "A website, an internal tool, a repetitive task that eats up your days. The least spectacular part of the job, and often the one that pays for itself fastest."
 
 [[extra.methode]]
 title = "Free scoping"
@@ -64,31 +64,31 @@ body = "A free conversation, by phone, over video or, preferably, in person, for
 
 [[extra.methode]]
 title = "Quoted proposal"
-body = "Written scope, deliverables, deadline and fixed price. You know what you are committing to before you sign."
+body = "In writing: what will be done, what you receive, by when, and at what fixed price. You know what you are committing to before you sign."
 
 [[extra.methode]]
 title = "Fast prototype"
-body = "A usable version as early as possible, to confirm the direction before investing in the rest."
+body = "A first usable version as early as possible. You see where it is going before you have paid for all of it."
 
 [[extra.methode]]
 title = "Delivery and handover"
-body = "Documented code, full access, a walkthrough with your teams. You own everything."
+body = "Documented code, full access, and a walkthrough with the people who will use it. You own everything."
 
 [[extra.travaux]]
 icon = "route"
 eyebrow = "University project · autumn 2025"
-title = "Collection routes for Bruxelles-Propreté"
-body = "Operations research project, September to December 2025, on the routes of the Brussels waste collection agency: up to a hundred vehicles and two collection points across the Brussels area. A C++ heuristic written for the occasion removes up to 20 % of the trucks for the same service."
+title = "Optimising household waste collection routes"
+body = "Operations research project, September to December 2025: organising the household waste collection of a large city, with a hundred trucks setting out from two sites. The program written for the occasion, in C++, does the same work with up to 20 % fewer trucks."
 
 [[extra.travaux]]
 icon = "network"
 eyebrow = "Internship · summer 2026"
-title = "Deep learning models at Vesuvius"
-body = "Development of deep learning models within the industrial group, on production data."
+title = "Building models during my internship"
+body = "Building learning models inside an industrial group, on the real data of its production."
 
 [[extra.travaux]]
 icon = "matrix"
 eyebrow = "Publication · EUSIPCO 2026"
 title = "An Evolutionary Algorithm for Discrete Factorization Problems"
-body = "A paper presented at EUSIPCO 2026 in Bruges, with Nicolas Gillis and Arnaud Vandaele. An evolutionary approach to factorization problems whose factors are constrained to discrete values."
+body = "A paper presented at EUSIPCO 2026 in Bruges, with Nicolas Gillis and Arnaud Vandaele. It puts forward a way of breaking a large table of data down into two simpler tables, when the allowed values are fixed in advance."
 +++
