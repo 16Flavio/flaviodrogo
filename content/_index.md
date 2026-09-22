@@ -1,94 +1,91 @@
 +++
 title = "Flavio Drogo"
-description = "Je conçois des outils qui organisent, prévoient et automatisent. Ingénieur civil en informatique et gestion, spécialisé en intelligence artificielle et aide à la décision."
+description = "Ingénieur civil en informatique et gestion. J'automatise des tâches répétitives avec des outils d'optimisation et d'intelligence artificielle : planification, prévision, détection d'anomalies."
 
 [extra]
-hero_title = "Organiser, prévoir, automatiser : <em>un outil taillé pour votre problème</em>."
-hero_lead = "Un planning à refaire chaque semaine, des tournées à organiser, une prévision à établir, un fichier à retraiter à la main : ce sont des problèmes qui se règlent une bonne fois. Je construis l'outil qui s'en charge, et je reste votre seul interlocuteur du premier échange à la mise en service."
-hero_cta = "Parlons de votre problème"
+hero_title = "J'automatise des tâches répétitives avec des outils d'optimisation et d'intelligence artificielle."
+hero_lead = "Un planning refait chaque semaine, des dossiers triés un par un : un programme peut s'en charger. Là où vous comparez trois options, il en examine des milliers et retient la meilleure ; sur mille lignes de données, il repère celle qui sort de l'ordinaire. Je construis cet outil, et je reste votre interlocuteur jusqu'à la mise en service."
+hero_cta = "Me contacter"
 hero_cta_alt = "Voir la démonstration"
 
-services_title = "Quatre façons de travailler ensemble"
-methode_title = "Du premier échange à la mise en production"
-travaux_title = "Ce sur quoi j'ai travaillé"
-profil_title = "Qui vous répondra"
+services_title = "Services"
+methode_title = "Méthode"
+travaux_title = "Travaux"
+travaux_note = "D'autres projets sont sur"
+profil_title = "Profil"
+contact_title = "Contact"
 
-profil_lead = "Ingénieur civil en informatique et gestion, spécialisé en <em>intelligence artificielle et aide à la décision</em>. Deux choses m'intéressent : trouver la meilleure décision quand les possibilités sont trop nombreuses pour être essayées une à une, et écrire du code qui va vite."
-profil_body = "Mon travail consiste autant à écrire ce code qu'à traduire un besoin en une solution de la bonne taille. Souvent, la bonne réponse est plus simple qu'un modèle d'intelligence artificielle, et je le dis quand c'est le cas."
+profil_lead = "En dernière année d'ingénieur civil en informatique et gestion. Ce qui me plaît avant tout, c'est l'automatisation, et l'intelligence artificielle est le plus bel outil dont on dispose pour ça."
+profil_body = "Tout ne se règle pas pour autant avec un modèle. L'optimisation et la logique mathématique viennent à bout de problèmes compliqués, souvent pour bien moins cher. Ce sont ces deux mondes qui m'animent. Les concours de programmation m'ont laissé un réflexe : ne pas m'arrêter à la première version qui marche."
 profil_note = "Participation aux concours internationaux de programmation BAPC et NWERC, en 2024 et en 2025."
 skills = ["Python", "C++", "PyTorch", "Java", "SQL", "Git"]
 
-contact_title = "Décrivez votre problème, je vous dis s'il est soluble."
-contact_lead = "Premier échange sans engagement. Si votre besoin ne relève pas de mes compétences, je vous le dirai plutôt que de vous vendre autre chose."
+contact_lead = "Décrivez votre situation en quelques lignes. Le premier échange est gratuit et sans engagement. Si le problème sort de mes compétences, je vous le dis et j'en reste là."
 
 demo_eyebrow = "Démonstration"
-demo_title = "Un aperçu de ce que pourrait être votre application"
-demo_body = "Deux outils à essayer, du même genre que ceux que je livre. Le premier surveille le capteur d'une machine : entraîné sur du fonctionnement normal, il signale les incidents que vous provoquez. Le second lit un chiffre que vous tracez à la main. À vous de voir ce que ça donnerait sur vos données."
+demo_title = "Deux démonstrations à essayer"
+demo_body = "La première surveille le capteur d'une machine et signale les incidents que vous provoquez vous-même. La seconde lit un chiffre que vous tracez à la souris."
 demo_cta = "Ouvrir la démonstration"
 
 [[extra.facts]]
 label = "Formation"
-value = "Ingénieur civil en informatique et gestion, spécialisation en intelligence artificielle et aide à la décision."
+value = "Dernière année d'ingénieur civil en informatique et gestion, spécialisation en intelligence artificielle et aide à la décision."
 
 [[extra.facts]]
 label = "Domaines"
-value = "Organisation et planification, modèles de prévision et de détection, calculs lourds rendus rapides."
+value = "Planification, prévision, détection d'anomalies, accélération de traitements existants."
 
 [[extra.facts]]
 label = "Disponibilité"
-value = "Belgique, sur site ou à distance. Missions courtes ou accompagnement continu. Français et anglais."
+value = "Belgique, sur site ou à distance. Missions de quelques semaines comme accompagnement au long cours. Français et anglais."
 
 [[extra.services]]
-key = "A"
 title = "Organiser et planifier"
-body = "Des tournées, des horaires, des équipes, des machines à répartir. Quand les combinaisons sont trop nombreuses pour être essayées une à une, un programme va chercher la meilleure. Je vous montre ensuite ce qu'elle change par rapport à votre façon de faire aujourd'hui."
+body = "Des tournées, des horaires, des équipes à répartir. Le nombre de combinaisons dépasse vite ce qu'on peut essayer à la main ; un programme, lui, les parcourt et retient la meilleure. Je place ensuite le résultat à côté de votre organisation actuelle, chiffres à l'appui."
 
 [[extra.services]]
-key = "B"
 title = "Prévoir et détecter"
-body = "Prévoir une demande, trier automatiquement des documents, repérer une anomalie avant qu'elle ne devienne une panne. Le modèle apprend sur vos données, et je vous dis franchement ce qu'il vaut, y compris quand la réponse est qu'il ne tient pas ses promesses."
+body = "Prévoir une demande, trier des documents, repérer une anomalie avant la panne. Le modèle apprend sur vos données. Je le teste ensuite sur des cas qu'il n'a jamais vus et je vous donne son taux d'erreur, y compris quand il est mauvais."
 
 [[extra.services]]
-key = "C"
 title = "Accélérer les calculs"
-body = "Un traitement qui tourne toute la nuit, un export qui prend vingt minutes. Je cherche d'où vient la lenteur et je réécris ce qui doit l'être. Le gain est mesuré avant et après, pas annoncé à l'avance."
+body = "Un traitement qui tourne toute la nuit, un export qui prend vingt minutes. Je commence par mesurer où part le temps, ce qui désigne presque toujours deux ou trois coupables. Je réécris ces morceaux-là. Les temps avant et après figurent dans le rapport."
 
 [[extra.services]]
-key = "D"
 title = "Applications et automatisation"
-body = "Un site, un outil interne, une tâche répétitive qui mange vos journées. La partie la moins spectaculaire du métier, souvent celle qui se rentabilise le plus vite."
+body = "Un site, un outil interne, une tâche répétitive qui mange vos journées. Un script d'une centaine de lignes suffit parfois à libérer une demi-journée par semaine."
 
 [[extra.methode]]
-title = "Cadrage gratuit"
-body = "Un échange gratuit, par téléphone, en visio ou, de préférence, sur place, aussi long qu'il le faut. Il sert à cadrer le problème : le résultat que vous attendez, les données réellement disponibles, et ce qui compte pour vous."
+title = "Cadrage"
+body = "Un échange gratuit, sur place si c'est possible. On y regarde le résultat que vous attendez et les données dont vous disposez réellement, ce qui n'est pas toujours la même chose que ce qui est censé exister."
 
 [[extra.methode]]
 title = "Proposition chiffrée"
-body = "Par écrit : ce qui sera fait, ce que vous recevez, pour quand, et à quel prix fixe. Vous savez à quoi vous vous engagez avant de signer."
+body = "Un document écrit : le périmètre, ce que vous recevez à la fin, la date, le prix. S'il faut sortir du périmètre, nous réadapterons le cahier des charges ensemble."
 
 [[extra.methode]]
-title = "Prototype rapide"
-body = "Une première version utilisable le plus tôt possible. Vous voyez où cela mène avant d'avoir tout payé."
+title = "Prototype"
+body = "Une première version qui tourne, le plus tôt possible dans le projet. Elle permet de vérifier que la solution, même sommaire, répond bien au problème posé."
 
 [[extra.methode]]
 title = "Livraison et transfert"
-body = "Code documenté, accès complet, et une prise en main avec les personnes qui s'en serviront. Vous restez propriétaire de tout."
+body = "Le code commenté, les accès, et une séance de prise en main avec les personnes qui vont s'en servir. Vous êtes propriétaire de l'ensemble, code source compris."
 
 [[extra.travaux]]
 icon = "route"
 eyebrow = "Projet universitaire · automne 2025"
 title = "Optimisation des tournées de ramassage des poubelles"
-body = "Projet du cours de recherche opérationnelle, de septembre à décembre 2025 : organiser le ramassage des poubelles d'une grande ville, avec une centaine de camions au départ de deux sites. Le programme écrit pour l'occasion, en C++, fait le même travail avec jusqu'à 20 % de camions en moins."
+body = "Projet du cours de recherche opérationnelle, de septembre à décembre 2025. Il s'agissait d'organiser le ramassage des poubelles d'une grande ville, avec une centaine de camions au départ de deux sites. Le programme écrit pour l'occasion, en C++, couvre le même terrain avec jusqu'à 20 % de camions en moins."
 
 [[extra.travaux]]
 icon = "network"
 eyebrow = "Stage · été 2026"
 title = "Développement de modèles pendant mon stage"
-body = "Développement de modèles d'apprentissage dans un groupe industriel, sur les données réelles de la production."
+body = "Développement de modèles d'apprentissage au sein d'un groupe industriel, à partir des données réelles de la production."
 
 [[extra.travaux]]
 icon = "matrix"
 eyebrow = "Publication · EUSIPCO 2026"
 title = "An Evolutionary Algorithm for Discrete Factorization Problems"
-body = "Article présenté à EUSIPCO 2026, à Bruges, avec Nicolas Gillis et Arnaud Vandaele. Il propose une façon de décomposer un grand tableau de données en deux tableaux plus simples, quand les valeurs autorisées sont fixées d'avance."
+body = "Article écrit avec Nicolas Gillis et Arnaud Vandaele, présenté à EUSIPCO 2026 à Bruges. Il décrit une méthode pour décomposer un grand tableau de données en deux tableaux plus simples, lorsque les valeurs autorisées sont fixées d'avance."
 +++

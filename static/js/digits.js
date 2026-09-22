@@ -240,7 +240,7 @@
   }
 
   var STROKE = pad.width * 0.078;
-  begin(ctx, '#17171a', STROKE);
+  begin(ctx, '#111214', STROKE);
   begin(inkCtx, '#fff', STROKE);
 
   pad.addEventListener('pointerdown', function (event) {

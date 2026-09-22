@@ -24,14 +24,12 @@
 
 <section class="band" id="services">
   <div class="band__head">
-    <span class="eyebrow">{{ trans(key="eyebrow_services", lang=lang) }}</span>
     <h2 class="heading">{{ c.services_title }}</h2>
   </div>
   <div class="band__body">
     <div class="cards">
       {% for s in c.services %}
       <article class="card">
-        <span class="card__key">{{ s.key }}</span>
         <h3>{{ s.title }}</h3>
         <p>{{ s.body }}</p>
       </article>
@@ -42,7 +40,6 @@
 
 <section class="band" id="methode">
   <div class="band__head">
-    <span class="eyebrow">{{ trans(key="eyebrow_method", lang=lang) }}</span>
     <h2 class="heading">{{ c.methode_title }}</h2>
   </div>
   <div class="band__body">
@@ -62,7 +59,6 @@
 
 <section class="band band--stack" id="travaux">
   <div class="band__head">
-    <span class="eyebrow">{{ trans(key="eyebrow_work", lang=lang) }}</span>
     <h2 class="heading">{{ c.travaux_title }}</h2>
   </div>
   <div class="works">
@@ -127,7 +123,7 @@
     </svg>
       {% elif w.icon == "network" %}
       <svg class="thumb" viewBox="0 0 220 132" role="img" aria-label="{{ trans(key='alt_network', lang=lang) }}">
-          <g stroke="currentColor" stroke-width="0.55" opacity="0.32">
+          <g stroke="currentColor" stroke-width="0.85" opacity="0.42">
             <line x1="24" y1="39" x2="84" y2="21"/>
             <line x1="24" y1="39" x2="84" y2="39"/>
             <line x1="24" y1="39" x2="84" y2="57"/>
@@ -282,31 +278,29 @@
         </svg>
       {% endif %}
       </div>
-      <span class="eyebrow eyebrow--dim">{{ w.eyebrow }}</span>
+      <span class="eyebrow">{{ w.eyebrow }}</span>
       <h3>{{ w.title }}</h3>
       <p>{{ w.body }}</p>
     </article>
     {% endfor %}
   </div>
 
+  <p class="works__more">{{ c.travaux_note }}
+    <a href="{{ config.extra.github }}" rel="me noopener">{{ config.extra.github | replace(from="https://", to="") }}</a>
+  </p>
+
   <a class="feature" href="{{ get_url(path='@/demo.md', lang=lang) }}">
     <div class="feature__text">
-      <span class="eyebrow eyebrow--invert">{{ c.demo_eyebrow }}</span>
+      <span class="eyebrow">{{ c.demo_eyebrow }}</span>
       <h3 class="feature__title">{{ c.demo_title }}</h3>
       <p>{{ c.demo_body }}</p>
-      <span class="feature__cta">{{ c.demo_cta }} <span aria-hidden="true">→</span></span>
-    </div>
-    <div class="feature__art" aria-hidden="true">
-      <span class="feature__blob feature__blob--a"></span>
-      <span class="feature__blob feature__blob--b"></span>
-      <span class="feature__digit">7</span>
+      <span class="feature__cta">{{ c.demo_cta }} <span aria-hidden="true">&rarr;</span></span>
     </div>
   </a>
 </section>
 
 <section class="band" id="profil">
   <div class="band__head">
-    <span class="eyebrow">{{ trans(key="eyebrow_profile", lang=lang) }}</span>
     <h2 class="heading">{{ c.profil_title }}</h2>
   </div>
   <div class="band__body profil">
@@ -325,8 +319,7 @@
 
 <section class="band band--last" id="contact">
   <div class="band__head">
-    <span class="eyebrow">{{ trans(key="eyebrow_contact", lang=lang) }}</span>
-    <h2 class="display display--sm">{{ c.contact_title }}</h2>
+    <h2 class="heading">{{ c.contact_title }}</h2>
   </div>
   <div class="band__body">
     <p class="lead">{{ c.contact_lead }}</p>

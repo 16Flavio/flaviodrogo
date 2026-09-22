@@ -31,7 +31,7 @@ photo = "/img/flavio-drogo.jpg"
 [translations]
 locale = "fr-BE"
 og_locale = "fr_BE"
-role = "Ingénieur civil · informatique & IA"
+role = "Ingénieur civil en informatique"
 
 skip = "Aller au contenu"
 nav_aria = "Navigation principale"
@@ -43,12 +43,6 @@ nav_profile = "Profil"
 nav_contact = "Contact"
 langs_aria = "Choix de la langue"
 footer_aria = "Liens de contact"
-
-eyebrow_services = "01 · Services"
-eyebrow_method = "02 · Méthode"
-eyebrow_work = "03 · Travaux"
-eyebrow_profile = "04 · Profil"
-eyebrow_contact = "05 · Contact"
 
 alt_matrix = "Une matrice booleenne approchee par le produit de deux facteurs plus etroits"
 alt_network = "Un reseau de neurones dense a quatre couches"
@@ -100,7 +94,7 @@ notfound_demo = "Voir la démonstration"
 [languages.en.translations]
 locale = "en-GB"
 og_locale = "en_GB"
-role = "Engineer · computer science & AI"
+role = "Computer science engineer"
 
 skip = "Skip to content"
 nav_aria = "Main navigation"
@@ -112,12 +106,6 @@ nav_profile = "Profile"
 nav_contact = "Contact"
 langs_aria = "Language selection"
 footer_aria = "Contact links"
-
-eyebrow_services = "01 · Services"
-eyebrow_method = "02 · Method"
-eyebrow_work = "03 · Work"
-eyebrow_profile = "04 · Profile"
-eyebrow_contact = "05 · Contact"
 
 alt_matrix = "A boolean matrix approximated by the product of two narrower factors"
 alt_network = "A dense neural network with four layers"

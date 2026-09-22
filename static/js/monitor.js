@@ -53,8 +53,9 @@
   var CALIB_CHUNK = 60;       // pas d'entraînement par image, pour ne pas figer l'onglet
   var CALIB_WINDOWS = 500;    // fenêtres normales servant à fixer le seuil
 
-  var INK = [23, 23, 26];
-  var ACCENT = [180, 83, 31];
+  var INK = [17, 18, 20];
+  var MODEL = [47, 72, 88];
+  var ALERT = [140, 48, 48];
 
   function rgba(c, a) {
     return 'rgba(' + c[0] + ',' + c[1] + ',' + c[2] + ',' + a + ')';
@@ -406,7 +407,7 @@
     function Y(v) { return h - (v - state.lo) / span * h; }
 
     // Les fenêtres jugées anormales, en fond.
-    signalCtx.fillStyle = rgba(ACCENT, 0.1);
+    signalCtx.fillStyle = rgba(ALERT, 0.1);
     for (var f = 0; f < n; f++) {
       if (state.flags[f]) signalCtx.fillRect(X(f) - dx / 2, 0, dx + 1, h);
     }
@@ -430,7 +431,7 @@
     // Ce que le modèle attendait, puis ce qui a réellement été mesuré.
     var start = firstReal(state.expected);
     if (start >= 0 && n > start + 1) {
-      signalCtx.strokeStyle = rgba(ACCENT, 0.85);
+      signalCtx.strokeStyle = rgba(MODEL, 0.85);
       signalCtx.lineWidth = Math.max(1.4, w / 620);
       signalCtx.setLineDash([Math.max(4, w / 190), Math.max(3, w / 260)]);
       signalCtx.beginPath();
@@ -452,7 +453,7 @@
     }
     signalCtx.stroke();
 
-    signalCtx.fillStyle = state.alerting ? rgba(ACCENT, 1) : rgba(INK, 1);
+    signalCtx.fillStyle = state.alerting ? rgba(ALERT, 1) : rgba(INK, 1);
     signalCtx.beginPath();
     signalCtx.arc(X(n - 1), Y(state.values[n - 1]), Math.max(3, w / 300), 0, 2 * Math.PI);
     signalCtx.fill();
@@ -498,7 +499,7 @@
     scoreCtx.beginPath();
     scoreCtx.rect(0, 0, w, Y(1));
     scoreCtx.clip();
-    scoreCtx.fillStyle = rgba(ACCENT, 0.22);
+    scoreCtx.fillStyle = rgba(ALERT, 0.22);
     scoreCtx.fill(path);
     scoreCtx.restore();
 
@@ -511,7 +512,7 @@
     }
     scoreCtx.stroke();
 
-    scoreCtx.strokeStyle = rgba(ACCENT, 0.75);
+    scoreCtx.strokeStyle = rgba(ALERT, 0.75);
     scoreCtx.lineWidth = Math.max(1, w / 800);
     scoreCtx.setLineDash([Math.max(3, w / 220), Math.max(3, w / 220)]);
     scoreCtx.beginPath();
