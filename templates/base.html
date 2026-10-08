@@ -5,8 +5,8 @@
 {%- set meta_description = config.description -%}
 {%- set meta_url = config.base_url ~ "/" -%}
 {%- endif -%}
-{%- set url_fr = get_url(path="@/_index.md") -%}
-{%- set url_en = get_url(path="@/_index.en.md") -%}
+{%- set url_fr = get_url(path="@/_index.md", lang="fr") -%}
+{%- set url_en = get_url(path="@/_index.md", lang="en") -%}
 {%- if lang == "fr" %}{% set home = url_fr %}{% else %}{% set home = url_en %}{% endif -%}
 <!DOCTYPE html>
 <html lang="{{ lang }}">

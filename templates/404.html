@@ -6,7 +6,7 @@
 <h1>{{ trans(key='notfound_title', lang='fr') }}</h1>
 <p lang="en">{{ trans(key='notfound_title', lang='en') }}</p>
 <p>
-  <a href="{{ get_url(path='@/_index.md') }}">{{ trans(key='notfound_home', lang='fr') }}</a> ·
-  <a href="{{ get_url(path='@/_index.en.md') }}" hreflang="en" lang="en">{{ trans(key='notfound_home', lang='en') }}</a>
+  <a href="{{ get_url(path='@/_index.md', lang='fr') }}">{{ trans(key='notfound_home', lang='fr') }}</a> ·
+  <a href="{{ get_url(path='@/_index.md', lang='en') }}" hreflang="en" lang="en">{{ trans(key='notfound_home', lang='en') }}</a>
 </p>
 {% endblock content %}
