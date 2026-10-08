@@ -5,7 +5,7 @@
 
 <h1>{{ c.hero_title }}</h1>
 <p class="lead">{{ c.hero_lead }}</p>
-<p class="demo">{{ c.demo_text }} <a href="{{ config.extra.demo }}">{{ config.extra.demo | replace(from="https://", to="") }}</a>.</p>
+<p class="demo">{{ c.demo_text }} <a href="{{ trans(key='demo_url', lang=lang) }}">{{ config.extra.demo | replace(from="https://", to="") }}</a>.</p>
 
 <h2>{{ c.travaux_title }}</h2>
 {% for w in c.travaux %}

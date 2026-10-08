@@ -31,9 +31,12 @@ og_locale = "fr_BE"
 role = "Ingénieur civil en informatique"
 notfound_title = "Cette page n'existe pas."
 notfound_home = "Retour à l'accueil"
+# Le site de démos affiche la langue demandée par ?lang=
+demo_url = "https://demo.flaviodrogo.be/?lang=fr"
 
 [languages.en.translations]
 og_locale = "en_GB"
 role = "Computer science engineer"
 notfound_title = "This page does not exist."
 notfound_home = "Back to the home page"
+demo_url = "https://demo.flaviodrogo.be/?lang=en"
